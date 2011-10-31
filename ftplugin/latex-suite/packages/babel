@@ -10,7 +10,7 @@ let babel_package_file = 1
 " Tex_pack_updateall() throws at which time g:Tex_pack_detected and
 " g:Tex_babel_options contain the necessary information.
 
-let g:TeX_package_option_babel = 
+let g:TeX_package_option_babel =
 \ 'afrikaans,'
 \.'bahasa,'
 \.'basque,'
@@ -53,7 +53,7 @@ let g:TeX_package_option_babel =
 \.'uppersorbian,'
 \.'welsh'
 
-let g:TeX_package_babel = 
+let g:TeX_package_babel =
 \ 'bra:selectlanguage,'
 \.'env:otherlanguage,'
 \.'env:otherlanguage*,'
@@ -76,7 +76,7 @@ endif
 let s:doneOnce = 1
 
 augroup LatexSuite
-    au LatexSuite User LatexSuiteScannedPackages 
+    au LatexSuite User LatexSuiteScannedPackages
         \ call Tex_Debug('babel: catching LatexSuiteScannedPackages event') |
         \ call s:SetQuotes()
 augroup END
@@ -84,7 +84,7 @@ augroup END
 let s:path = expand('<sfile>:p:h')
 
 " SetQuotes: sets quotes for various languages {{{
-" Description: 
+" Description:
 function! <SID>SetQuotes()
     if g:Tex_package_detected =~ '\<babel\>'
         if g:Tex_babel_options =~ '\<german\>'

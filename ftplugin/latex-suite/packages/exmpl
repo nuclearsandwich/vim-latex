@@ -20,8 +20,8 @@ let g:TeX_package_option_exmpl = "OpcjaA=,OpcjaB,OpcjaC"
 " env: (environment) creates simple environment template
 "   \begin{command}
 "     x          <- cursor here
-"   \end{command}  
-" 
+"   \end{command}
+"
 " bra: (brackets) useful when inserting brackets commands
 "   \command{x}<<>> <- cursor at x, and placeholders as in other menu entries
 "
@@ -30,13 +30,13 @@ let g:TeX_package_option_exmpl = "OpcjaA=,OpcjaB,OpcjaC"
 "
 " pla: (plain)
 "   command<Space>
-" 
+"
 " spe: (special)
 "   command   <-literal insertion of command, in future here should go
 "               commands with special characters
-" 
+"
 " sep: (separator) creates separator. Good for aesthetics and usability :)
-"   
+"
 " Command can be also given with no prefix:. The result is
 "   \command   (as in nor: but without <Space>)
 

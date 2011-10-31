@@ -26,10 +26,10 @@
 "       the surrounding environment. For example, inside itemize, it will
 "       insert a simple \item, but within a description, it will insert
 "       \item[<+label+>] etc.
-" 
+"
 " These functions make it extremeley easy to do all the \left \right stuff in
 " latex.
-" ============================================================================== 
+" ==============================================================================
 
 " Avoid reinclusion.
 if exists('b:did_brackets')
@@ -43,7 +43,7 @@ if exists('*Tex_MathBF')
 endif
 
 " Tex_MathBF: encloses te previous letter/number in \mathbf{} {{{
-" Description: 
+" Description:
 function! Tex_MathBF()
 	return "\<Left>\\mathbf{\<Right>}"
 endfunction " }}}
@@ -136,8 +136,8 @@ endfunction
 " }}}
 
 augroup LatexSuite
-	au LatexSuite User LatexSuiteFileType 
-		\ call Tex_Debug('brackets.vim: Catching LatexSuiteFileType event', 'brak') | 
+	au LatexSuite User LatexSuiteFileType
+		\ call Tex_Debug('brackets.vim: Catching LatexSuiteFileType event', 'brak') |
 		\ call <SID>Tex_SetBracketingMaps()
 augroup END
 

@@ -3,7 +3,7 @@
 "      Author: Mikolaj Machowski
 "     Created: Tue Apr 23 08:00 PM 2002 PST
 "  CVS Header: $Id: envmacros.vim 1101 2010-01-28 23:30:56Z tmaas $
-"  Description: mappings/menus for environments. 
+"  Description: mappings/menus for environments.
 "=============================================================================
 
 if !g:Tex_EnvironmentMaps && !g:Tex_EnvironmentMenus
@@ -48,7 +48,7 @@ if !exists('s:vis_center_left')
 endif
 " }}}
 " Tex_EnvMacros: sets up maps and menus for environments {{{
-" Description: 
+" Description:
 function! <SID>Tex_EnvMacros(lhs, submenu, name)
 
 	let extra = ''
@@ -65,7 +65,7 @@ function! <SID>Tex_EnvMacros(lhs, submenu, name)
 	let vrhs = "\<C-\\>\<C-N>:call VEnclose('".vleft."', '".vright."', '\\begin{".a:name."}', '\\end{".a:name."}')\<CR>"
 	let location = g:Tex_EnvMenuLocation.a:submenu.a:name.'<tab>'
 
-	if a:lhs != '' 
+	if a:lhs != ''
 
 		let vlhs = g:Tex_Leader2.substitute(tolower(a:lhs), '^.', '', '')
 		let location = location.a:lhs.'\ ('.vlhs.')'
@@ -82,11 +82,11 @@ function! <SID>Tex_EnvMacros(lhs, submenu, name)
 		exe 'vmenu '.location.' '.vrhs
 	endif
 
-endfunction 
+endfunction
 
 " }}}
 " Tex_SpecialMacros: macros with special right hand sides {{{
-" Description: 
+" Description:
 function! <SID>Tex_SpecialMacros(lhs, submenu, name, irhs, ...)
 
 	let wiz = 1
@@ -127,7 +127,7 @@ function! <SID>Tex_SpecialMacros(lhs, submenu, name, irhs, ...)
 
 endfunction " }}}
 " Tex_SectionMacros: creates section maps and menus {{{
-" Description: 
+" Description:
 function! <SID>Tex_SectionMacros(lhs, name)
 
 	let vlhs = g:Tex_Leader2.substitute(tolower(a:lhs), '^.', '', '')
@@ -180,9 +180,9 @@ call s:Tex_SpecialMacros('', 'Env&Commands.&Tabbing.', '&grave\ \\CHAR`', '\<++>
 call s:Tex_SpecialMacros('', 'Env&Commands.&Tabbing.', 'p&ushtabs', '\pushtabs', 0)
 call s:Tex_SpecialMacros('', 'Env&Commands.&Tabbing.', 'p&optabs', '\poptabs', 0)
 call s:Tex_SpecialMacros('', 'EnvCommands.&Tabular.', '&hline', '\hline', 0)
-call s:Tex_SpecialMacros('', 'EnvCommands.&Tabular.', '&cline', '\cline', 0) 
-call s:Tex_SpecialMacros('', 'EnvCommands.&Tabular.', '&\&', '&', 0) 
-call s:Tex_SpecialMacros('', 'EnvCommands.&Tabular.', '&\\\\', '\\', 0) 
+call s:Tex_SpecialMacros('', 'EnvCommands.&Tabular.', '&cline', '\cline', 0)
+call s:Tex_SpecialMacros('', 'EnvCommands.&Tabular.', '&\&', '&', 0)
+call s:Tex_SpecialMacros('', 'EnvCommands.&Tabular.', '&\\\\', '\\', 0)
 call s:Tex_SpecialMacros('', 'EnvCommands.&Tabular.', '&multicolumn{}{}{}', '\multicolumn{<++>}{<++>}{<++>}<++>', 0)
 call s:Tex_SpecialMacros('', 'EnvCommands.Le&tter.', '&makelabels', '\makelabels', 0)
 call s:Tex_SpecialMacros('', 'EnvCommands.Le&tter.', '&address', '\address', 0)
@@ -281,12 +281,12 @@ endif
 "   nnoremap <lhs> i<C-r>=Tex_itemize('enumerate')<CR>
 "
 " and so on...
-" ============================================================================== 
+" ==============================================================================
 " Tex_itemize: {{{
 function! Tex_itemize(env)
 	return IMAP_PutTextWithMovement('\begin{'.a:env."}\<cr>\\item <++>\<cr>\\end{".a:env."}<++>")
 endfunction
-" }}} 
+" }}}
 " Tex_description: {{{
 function! Tex_description(env)
 	if g:Tex_UseMenuWizard == 1
@@ -299,7 +299,7 @@ function! Tex_description(env)
 		return IMAP_PutTextWithMovement(s:description)
 	endif
 endfunction
-" }}} 
+" }}}
 " Tex_figure: {{{
 function! Tex_figure(env)
 	if g:Tex_UseMenuWizard == 1
@@ -327,7 +327,7 @@ function! Tex_figure(env)
 		endif
 		if center == 'y'
 		  let centr = '\begin{center}' . "\<cr>"
-		  let centr = centr . pic 
+		  let centr = centr . pic
 		  let centr = centr . caption
 		  let centr = centr . label
 		  let centr = centr . '\end{center}' . "\<cr>"
@@ -348,7 +348,7 @@ function! Tex_figure(env)
 		endif
 	endif
 endfunction
-" }}} 
+" }}}
 " Tex_table: {{{
 function! Tex_table(env)
 	if g:Tex_UseMenuWizard == 1
@@ -392,7 +392,7 @@ function! Tex_table(env)
 		return IMAP_PutTextWithMovement(s:table)
 	endif
 endfunction
-" }}} 
+" }}}
 " Tex_tabular: {{{
 function! Tex_tabular(env)
 	if g:Tex_UseMenuWizard == 1
@@ -409,7 +409,7 @@ function! Tex_tabular(env)
 		return IMAP_PutTextWithMovement('\begin{'.a:env.'}[<+position+>]{<+format+>}'."\<cr><++>\<cr>\\end{".a:env.'}<++>')
 	endif
 endfunction
-" }}} 
+" }}}
 " Tex_eqnarray: {{{
 function! Tex_eqnarray(env)
 	if g:Tex_UseMenuWizard == 1
@@ -432,7 +432,7 @@ function! Tex_eqnarray(env)
 	endif
 	return IMAP_PutTextWithMovement('\begin{'.a:env."}\<cr><++>\<cr>".arrlabel."\\end{".a:env."}<++>")
 endfunction
-" }}} 
+" }}}
 " Tex_list: {{{
 function! Tex_list(env)
 	if g:Tex_UseMenuWizard == 1
@@ -451,7 +451,7 @@ function! Tex_list(env)
 		return IMAP_PutTextWithMovement(s:list)
 	endif
 endfunction
-" }}} 
+" }}}
 " Tex_document: {{{
 function! Tex_document(env)
 	if g:Tex_UseMenuWizard == 1
@@ -468,7 +468,7 @@ function! Tex_document(env)
 		return IMAP_PutTextWithMovement(s:document)
 	endif
 endfunction
-" }}} 
+" }}}
 " Tex_minipage: {{{
 function! Tex_minipage(env)
 	if g:Tex_UseMenuWizard == 1
@@ -485,7 +485,7 @@ function! Tex_minipage(env)
 		return IMAP_PutTextWithMovement(s:minipage)
 	endif
 endfunction
-" }}} 
+" }}}
 " Tex_thebibliography: {{{
 function! Tex_thebibliography(env)
 	if g:Tex_UseMenuWizard == 1
@@ -508,18 +508,18 @@ function! Tex_thebibliography(env)
 			\ "\\end{thebibliography}<++>")
 	endif
 endfunction
-" }}} 
+" }}}
 
 " ==============================================================================
 " Contributions / suggestions from Carl Mueller (auctex.vim)
-" ============================================================================== 
+" ==============================================================================
 " PromptForEnvironment: prompts for an environment {{{
-" Description: 
+" Description:
 function! PromptForEnvironment(ask)
 	return Tex_ChooseFromPrompt(
-		\ a:ask."\n" . 
+		\ a:ask."\n" .
 		\ Tex_CreatePrompt(g:Tex_PromptedEnvironments, 2, ",") .
-		\ "\nEnter name or number of environment :", 
+		\ "\nEnter name or number of environment :",
 		\ g:Tex_PromptedEnvironments, ",")
 endfunction " }}}
 " Tex_DoEnvironment: fast insertion of environments {{{
@@ -551,7 +551,7 @@ function! Tex_DoEnvironment(...)
 	endif
 endfunction " }}}
 " Tex_PutEnvironment: calls various specialized functions {{{
-" Description: 
+" Description:
 "   Based on input argument, it calls various specialized functions.
 function! Tex_PutEnvironment(env)
 	if exists("s:isvisual") && s:isvisual == "yes"
@@ -563,7 +563,7 @@ function! Tex_PutEnvironment(env)
 		endif
 		return VEnclose('\begin{'.a:env.'}', '\end{'.a:env.'}', '\begin{'.a:env.'}', '\end{'.a:env.'}')
 	else
-		" The user can define something like 
+		" The user can define something like
 		" let g:Tex_Env_theorem = "\\begin{theorem}\<CR><++>\<CR>\\end{theorem}"
 		" This will effectively over-write the default definition of the
 		" theorem environment which uses a \label.
@@ -683,7 +683,7 @@ if g:Tex_PromptedEnvironments != ''
 
 		endif
 
-	endfunction 
+	endfunction
 
 	" }}}
 	" Tex_package_from_line: puts a \usepackage line in the current line. " {{{
@@ -691,17 +691,17 @@ if g:Tex_PromptedEnvironments != ''
 	"
 	function! Tex_package_from_line()
 		" Function Tex_PutPackage is defined in packages.vim
-		" Ignores <F5> in Visual mode 
+		" Ignores <F5> in Visual mode
 		if s:isvisual == "yes"
 			return 0
-		else	   
+		else
 			let l = getline(".")
 			let pack = matchstr(l, '^\s*\zs.*')
 			normal!  0"_D
 			return Tex_pack_one(pack)
 		endif
-	endfunction 
-	
+	endfunction
+
 	" }}}
 	" Tex_ChangeEnvironments: calls Change() to change the environment {{{
 	" Description:
@@ -710,7 +710,7 @@ if g:Tex_PromptedEnvironments != ''
 	"   which need to be made to change one env to another and calls
 	"   Change() with the info.
 	"
-	function! Tex_ChangeEnvironments() 
+	function! Tex_ChangeEnvironments()
 
 		let env_line = searchpair('$$\|\\[\|begin{', '', '$$\|\\]\|end{', "bn")
 
@@ -721,7 +721,7 @@ if g:Tex_PromptedEnvironments != ''
 				let env_name = matchstr(getline(env_line), 'begin{\zs.\{-}\ze}')
 			endif
 		endif
-		
+
 		if !exists('env_name')
 			echomsg "You are not inside environment"
 			return 0
@@ -747,15 +747,15 @@ if g:Tex_PromptedEnvironments != ''
 			return 0
 		endif
 
-	endfunction 
-	
+	endfunction
+
 	" }}}
 	" Change: changes the current env to the new env {{{
-	" Description: 
+	" Description:
 	"   This function needs to know the changes which need to be made while
 	"   going from an old environment to a new one. This info, it gets from
 	"   Tex_ChangeEnvironments
-	" 
+	"
 	"   env : name of the new environment.
 	"   label : if 1, then insert a \label at the end of the environment.
 	"           otherwise, delete any \label line found.
@@ -834,7 +834,7 @@ endif
 if g:Tex_HotKeyMappings != ''
 
 	" SetUpHotKeys: maps <F1> through <F4> to insert environments
-	" Description: 
+	" Description:
 	function! <SID>SetUpHotKeys()
 		let i = 1
 		let envname = Tex_Strntok(g:Tex_HotKeyMappings, ',', i)
@@ -844,7 +844,7 @@ if g:Tex_HotKeyMappings != ''
 
 			let i = i + 1
 			let envname = Tex_Strntok(g:Tex_HotKeyMappings, ',', i)
-			
+
 		endwhile
 
 	endfunction
@@ -870,10 +870,10 @@ endfunction " }}}
 
 " ==============================================================================
 " Contributions / Tex_InsertItem() from Johannes Tanzler
-" ============================================================================== 
+" ==============================================================================
 " Tex_GetCurrentEnv: gets the current environment in which the cursor lies {{{
 " Description: handles cases such as:
-" 	
+"
 " 	\begin{itemize}
 " 		\item first item
 " 		\item second item
@@ -885,7 +885,7 @@ endfunction " }}}
 " 		\item third item
 " 		% Tex_GetCurrentEnv will return "itemize" when called from here
 " 	\end{itemize}
-" 	% Tex_GetCurrentEnv will return "" when called from here 
+" 	% Tex_GetCurrentEnv will return "" when called from here
 "
 " Author: Alan Schmitt
 function! Tex_GetCurrentEnv()
@@ -921,7 +921,7 @@ endfunction
 "    Description: Find last \begin line, extract env name, return to the start
 "    			  position and insert proper \item, depending on env name.
 "    			  Env names are stored in g: variables it can be used by
-"    			  package files. 
+"    			  package files.
 
 TexLet g:Tex_ItemStyle_itemize = '\item '
 TexLet g:Tex_ItemStyle_enumerate = '\item '
@@ -955,7 +955,7 @@ function! Tex_SetItemMaps()
 endfunction " }}}
 
 " ==============================================================================
-" Implementation of Fast Environment commands for LaTeX commands 
+" Implementation of Fast Environment commands for LaTeX commands
 " ==============================================================================
 " Define certain commonly used command definitions {{{
 
@@ -964,9 +964,9 @@ TexLet g:Tex_Com_{'frac'} = '\frac{<+n+>}{<+d+>}<++>'
 
 " }}}
 " PromptForCommand: prompts for a command {{{
-" Description: 
+" Description:
 function! PromptForCommand(ask)
-	let common_com_prompt = 
+	let common_com_prompt =
 				\ Tex_CreatePrompt(g:Tex_PromptedCommands, 2, ',') . "\n" .
 				\ "Enter number or command name :"
 
@@ -1021,7 +1021,7 @@ function! Tex_DoCommand(isvisual)
 	endif
 endfunction " }}}
 " Tex_PutCommand: calls various specialized functions {{{
-" Description: 
+" Description:
 "   Based on input argument, it calls various specialized functions.
 function! Tex_PutCommand(com, isvisual)
 	if a:isvisual == "yes"
@@ -1048,7 +1048,7 @@ endfunction " }}}
 " and <S-F7> to prompt/replace command
 "
 " g:Tex_PromptedCommands is a variable containing a comma seperated list
-" of commands. 
+" of commands.
 "
 " Leaving this empty is equivalent to disabling the feature.
 if g:Tex_PromptedCommands != ''
@@ -1069,7 +1069,7 @@ if g:Tex_PromptedCommands != ''
 	"   which need to be made to change one env to another and calls
 	"   ChangeCommand() with the info.
 	"
-	function! Tex_ChangeCommand(isvisual) 
+	function! Tex_ChangeCommand(isvisual)
 
 		let pos_com = Tex_GetPos()
 
@@ -1079,7 +1079,7 @@ if g:Tex_PromptedCommands != ''
 			normal l
 			let com_name = expand('<cword>')
 		endif
-		
+
 		if !exists('com_name')
 			echomsg "You are not inside command"
 			call Tex_SetPos(pos_com)
@@ -1098,7 +1098,7 @@ if g:Tex_PromptedCommands != ''
 			return 0
 		endif
 
-	endfunction 
+	endfunction
 
 	" }}}
 	" ChangeCommand: Changes current command according to prompt menu {{{
@@ -1107,7 +1107,7 @@ if g:Tex_PromptedCommands != ''
 	function! s:ChangeCommand(newcom)
 
 		exe 'normal! ct{'.a:newcom."\<Esc>"
-		
+
 	endfunction
 	" }}}
 
@@ -1138,7 +1138,7 @@ function! Tex_SetFastCommandMaps()
 endfunction " }}}
 
 " SetEnvMacrosOptions: sets mappings for buffers {{{
-" " Description: 
+" " Description:
 function! <SID>SetEnvMacrosOptions()
 	if exists('b:doneTexEnvMaps')
 		return
@@ -1154,7 +1154,7 @@ function! <SID>SetEnvMacrosOptions()
 endfunction " }}}
 " Catch the Filetype event so we set maps for each buffer {{{
 augroup LatexSuite
-	au LatexSuite User LatexSuiteFileType 
+	au LatexSuite User LatexSuiteFileType
 		\ call Tex_Debug('envmacros.vim: Catching LatexSuiteFileType event', 'env') |
 		\ call s:SetEnvMacrosOptions()
 augroup END

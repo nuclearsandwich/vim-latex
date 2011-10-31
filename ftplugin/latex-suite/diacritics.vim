@@ -2,8 +2,8 @@
 " 	     File: diacritics.vim
 "      Author: Lubomir Host
 "     Created: Tue Apr 23 07:00 PM 2002 PST
-" 
-"  Description: shortcuts for all diacritics. 
+"
+"  Description: shortcuts for all diacritics.
 "=============================================================================
 
 if !g:Tex_Diacritics

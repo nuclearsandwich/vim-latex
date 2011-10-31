@@ -1,10 +1,10 @@
 " Author: Mikolaj Machowski <mikmach@wp.pl>
 " (c) Copyright by Mikolaj Machowski 2002-2003
 " License: Vim Charityware
-" Version: 1.6 
+" Version: 1.6
 "
 " Plik jest w kodowaniu iso-8859-2. Je¶li chcesz go uzywac w MS-Windows musisz
-" go przekonwertowac na cp-1250. 
+" go przekonwertowac na cp-1250.
 "
 " Plik ten jest czê¶ci± vim-latexSuite, ale:
 " Nie u¿ywaj±cy vim-latexSuite (http://vim-latex.sourceforge.net) mog± wyci±æ
@@ -28,7 +28,7 @@ let acromake_package_file = 1
 " Czesc odpowiedzialna za menu
 let g:TeX_package_option_polski =
 \'OT1,OT4,T1,QX,plmath,nomathsymbols,MeX,prefixingverb,noprefixingverb'
-let g:TeX_package_polski = 
+let g:TeX_package_polski =
 \'sbr:Dywiz&Ska,'.
 \'nor:dywiz,'.
 \'nor:ppauza,'.
@@ -60,10 +60,10 @@ endfunction
 call TPackagePolskiTylda()
 " --------8<-------------
 
-" Polskie znaki cudzyslowow 
+" Polskie znaki cudzyslowow
 TexLet g:Tex_SmartQuoteOpen = ",,"
 TexLet g:Tex_SmartQuoteClose = "''"
- 
+
 " Zmodyfikowana i rozwinieta funkcja Andrzeja Ostruszki
 " Z dodatkiem od Benjiego Fishera (sprawdzanie sk³adni)
 "
@@ -160,6 +160,6 @@ function! s:Tex_polish_space()
 		" Tu koncz komentowanie ostatniej sekcji
 	endif
 	return " "
-endfunction 
+endfunction
 
 " vim:ft=vim:ff=unix:

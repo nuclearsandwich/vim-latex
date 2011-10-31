@@ -67,9 +67,9 @@ following settings in your .vimrc
 
     " Necessary: This setting tells (G)Vim to load LaTeX Suite
     " when a .tex, .ltx or .latex file is opened.
-    
+
     filetype plugin indent on
-    
+
     " IMPORTANT: win32 users will need to have 'shellslash'
     " set so that latex can be called correctly.
 
@@ -146,7 +146,7 @@ to browse the LaTeX manuals that are provided by LaTeX Suite.
 Coding our first LaTeX source file with the help of LaTeX Suite:
 
 Now that we have installed LaTeX Suite on our PC, let's start with
-typesetting our first LaTeX document using LaTeX Suite. 
+typesetting our first LaTeX document using LaTeX Suite.
 
 Since we are doing this for the first time, let's use Gvim rather than
 Vim. With Gvim, we have the advantage of using menus. LaTeX Suite builds
@@ -210,7 +210,7 @@ The following will appear in the text area on your screen:
 <<possible bug here>>
 
 
------------- on screen ------------ 
+------------ on screen ------------
 %        File: myfile.tex
 %     Created: Wed May 21 08:00 PM 2003 I
 % Last Change: Wed May 21 08:00 PM 2003 I
@@ -226,7 +226,7 @@ The following will appear in the text area on your screen:
 ~
 ::call histdel("/", -1)|let @/=histget("/", -1)|let &selection = 'inclusive'
 Hit ENTER or type command to continue
------------- on screen ------------ 
+------------ on screen ------------
 
 Notice the lines;
 
@@ -238,7 +238,7 @@ That <++> is a place holder for the text you will type in later as part
 of the exercise. Now, read the last line. it says "Hit ENTER", go ahead
 and do that. Now you see a slight change in the onscreen contents;
 
------------- on screen ------------ 
+------------ on screen ------------
 %        File: myfile.tex
 %     Created: Wed May 21 08:00 PM 2003 I
 % Last Change: Wed May 21 08:00 PM 2003 I
@@ -252,8 +252,8 @@ and do that. Now you see a slight change in the onscreen contents;
 ~
 ~
 ~
--- XIM INSERT -- 
------------- on screen ------------ 
+-- XIM INSERT --
+------------ on screen ------------
 
 The <++> symbols have disappeared and your cursor is now positioned in
 their place, blinking away to glory. that's your queue to type in the text
@@ -308,7 +308,7 @@ to it.
 
 Below the line we wrote earlier, insert the following;
 
-This is the first line. 
+This is the first line.
 
 Now, while we're still in insert mode, click on;
 
@@ -336,7 +336,7 @@ sensitive)
 
 This will present you with a list of all available templates:
 
------------- on screen ------------ 
+------------ on screen ------------
 ~
 ~
 ~
@@ -348,7 +348,7 @@ Choose a template file:
 (7) report_two_column.tex
 
 Enter number or name of file :
------------- on screen ------------ 
+------------ on screen ------------
 
 Follow the onscreen instructions, type the number '2' or the full name
 of the file "article.tex" and hit enter. That will insert the article
@@ -358,7 +358,7 @@ template and your screen now looks like this;
 <<possible bug here>>
 
 
------------- on screen ------------ 
+------------ on screen ------------
 ~
 ~
 ~
@@ -371,11 +371,11 @@ Choose a template file:
 
 
 Hit ENTER or type command to continue
------------- on screen ------------ 
+------------ on screen ------------
 
 go ahead, hit <enter> ...your screen will then look like this;
 
------------- on screen ------------ 
+------------ on screen ------------
 %        File: myfile.tex
 %     Created: Wed May 21 08:00 PM 2003 I
 % Last Change: Wed May 21 08:00 PM 2003 I
@@ -389,8 +389,8 @@ go ahead, hit <enter> ...your screen will then look like this;
 ~
 ~
 ~
--- XIM INSERT -- 
------------- on screen ------------ 
+-- XIM INSERT --
+------------ on screen ------------
 
 ...and your cursor is now positioned in their place, blinking away to
 glory. that's your queue to type in the text content of your article. Does
@@ -408,7 +408,7 @@ can be used in the same way. Let's go on to the next section.
 Open 'myfile.tex' with Gvim and from the menu select
 TeX-Environments>Lists>Itemize now your screen should look like this;
 
------------- on screen ------------ 
+------------ on screen ------------
 %     Created: Fri May 23 12:00 PM 2003 I
 % Last Change: Fri May 23 12:00 PM 2003 I
 %
@@ -424,32 +424,32 @@ This is my first list of items.
 ~
 ~
 ~
--- XIM INSERT -- 
------------- on screen ------------ 
+-- XIM INSERT --
+------------ on screen ------------
 
 Now, from the menu, click TeX-Environments>Lists>itemize -four new lines
 just appeared on your screen like this;
 
------------- on screen ------------ 
+------------ on screen ------------
 ...
 This is my first list of items.
 \begin{itemize}
-	\item 
+	\item
 \end{itemize}<++>
 \end{document}
------------- on screen ------------ 
+------------ on screen ------------
 
 ...and the cursor is located after the "\item". That's where you start
 add content so it looks like this;
 
------------- on screen ------------ 
+------------ on screen ------------
 ...
 This is my first list of items.
 \begin{itemize}
 	\item rice
 \end{itemize}<++>
 \end{document}
------------- on screen ------------ 
+------------ on screen ------------
 
 
 Now, we'll move to the next line and add another item, click on
@@ -457,7 +457,7 @@ TeX-Environmants>EnvCommands>Lists>item -a "\item" command appears where
 your cursor was, ad content to that and add another item and remove that
 place-holder <++> (we won't be using it) so it looks like this;
 
------------- on screen ------------ 
+------------ on screen ------------
 ...
 This is my first list of items.
 \begin{itemize}
@@ -466,13 +466,13 @@ This is my first list of items.
 	\item corn
 \end{itemize}
 \end{document}
------------- on screen ------------ 
+------------ on screen ------------
 
 Done? ok. let's add another list of items, this time using the keyboard
 only. Insert a blank line after the \end{itemize} in our list and do add
 some content so it looks like;
 
------------- on screen ------------ 
+------------ on screen ------------
 ...
 This is my first list of items.
 \begin{itemize}
@@ -488,7 +488,7 @@ grapes
 plankton
 
 \end{document}
------------- on screen ------------ 
+------------ on screen ------------
 
 Now, hit the ESC key. Done? OK, now, move the cursor to the "a" of
 apples and hit CTRL+V and using the cursor (or j) key move the cursor
@@ -496,7 +496,7 @@ down to plankton. Done? OK, now hit the End key (or $). Done? Good,
 you've just marked a block of text in visual mode. Now hit the keys
 ",it". Now your screen looks like;
 
------------- on screen ------------ 
+------------ on screen ------------
 %     Created: Fri May 23 12:00 PM 2003 I
 % Last Change: Fri May 23 12:00 PM 2003 I
 %
@@ -521,14 +521,14 @@ This is my second list of items.
 \end{itemize}
 
 \end{document}
------------- on screen ------------ 
+------------ on screen ------------
 
 Position your cursor under the "a" of apples and hit ALT+n followed
 immediately by "cli", this should insert the \item -you'll have to put
 a space after that \item. Do this for oranges, grapes and plankton too,
 so the whole thing now looks like this;
 
------------- on screen ------------ 
+------------ on screen ------------
 ...
 ...
 This is my second list of items.
@@ -540,7 +540,7 @@ This is my second list of items.
 \end{itemize}
 ...
 ...
------------- on screen ------------ 
+------------ on screen ------------
 
 Now save the file, compile and view the results.
 
@@ -552,7 +552,7 @@ line and press 'o'. It opens new line. Now go to the packages menu:
 TeX-Suite>Packages>Supported and check if amsmath is supported. It
 is. Choose. Now you have:
 
------------- on screen ------------ 
+------------ on screen ------------
 %        File: myfile.tex
 %     Created: Wed May 21 08:00 PM 2003 I
 % Last Change: Wed May 21 08:00 PM 2003 I
@@ -562,7 +562,7 @@ is. Choose. Now you have:
 \begin{document}
 
 \end{document}
------------- on screen ------------ 
+------------ on screen ------------
 
 << cursor at | >>
 
@@ -618,14 +618,14 @@ For environments, sections and fonts, the insert mode mappings are a sequence
 of 3 capital letters. The visual mode mapping follows from the insert mode
 mapping by replacing the first character by a comma (',') (for environments
 and sections) or back-tick ('`') (for fonts) and converting the rest to lower
-case. 
+case.
 
  -------------------------------------------
               | Insert Mode   |  Visual Mode
  -------------+---------------+-------------
  environmnts  |    EFI        |    ,fi
  fonts        |    FSF        |    `sf
- section      |    SSE        |    ,se 
+ section      |    SSE        |    ,se
  -------------------------------------------
 
 Most of the the menu items also specify the insert and visual mode
@@ -687,7 +687,7 @@ b) If the environment can be broken up into 2 distinct words, such as
    flushright (flush + right), then the next 2 letters are the first
    letters of the 2 words.
 
-   Example: 
+   Example:
         flushleft  (_f_lush + _l_eft)  ---> EFL
         flushright (_f_lush + _r_ight) ---> EFR
         eqnarray   (_e_qn + _a_rray)   ---> EEA
@@ -741,9 +741,9 @@ Mnemonic:
 Example: the above mapping is triggered by FSF.
 
 Just like environment mappings, you can visually select an area and press
-`sf to have it enclosed in: 
+`sf to have it enclosed in:
       \textsf{word}
-or 
+or
       {\sffamily
       line
       }
@@ -758,7 +758,7 @@ These insert LaTeX sections "\section" etc. Just as in the case of
 environments and fonts, can be enclosed with a visual selection. The
 enclosing is not sensetive to character or line-wise selection.
 
-Mnemonic: (make your own :-) 
+Mnemonic: (make your own :-)
       SPA for part
       SCH for chapter
       SSE for section
@@ -805,7 +805,7 @@ rest of LaTeX Suite keymaps are all on the 3 letter pattern discussed
 earlier. These are all used in insert mode.
 
 Examples:
-    `.   expands to   \cdot 
+    `.   expands to   \cdot
     `*   expands to   \times
     `~   expands to   \tilde{<++>}<++>
 
@@ -814,7 +814,7 @@ As you noticed, those placeholders are present here as well.
 For a complete list of these keybindings refer to the Cheat Sheet that
 comes with this book.
 
-Diacritics: 
+Diacritics:
 Diacritics speed up typing European languages.
 
     +<l>  expands to    \v{<l>}
@@ -839,9 +839,9 @@ expansions for the Greek Letters supported by LaTeX.
 Examples:
 
    `a    expands to   \alpha
-   `A    expands to   \Alpha  
+   `A    expands to   \Alpha
    `b    expands to   \beta
-   `B    expands to   \Beta  
+   `B    expands to   \Beta
 
 Note: LaTeX does not support all Upper case Greek Letters.
 
@@ -907,7 +907,7 @@ The fold-text is set to the first line of the folded text unless the fold is a
 table, figure etc. (an environment). In this case, if a \caption and/or a
 label is found in the folded region, then those are used to make a more
 meaningful fold-tex, otherwise the second line of the environment is displayed
-along with the name of the environment. In other words, the following 
+along with the name of the environment. In other words, the following
 
     \begin{figure}[h]
       \centerline{\psfig{figure=slidercrank.eps,height=6cm}}
@@ -919,7 +919,7 @@ along with the name of the environment. In other words, the following
       \sin(\pi) = 0
     \end{eqnarray}
 
-will be shown as: 
+will be shown as:
 
   +---  5 lines: figure (fig:slidercrank) : The Slider Crank Mechanism. -----
   % a LaTeX comment.
@@ -987,7 +987,7 @@ is not supported. No problem, you don't have write whole command
 
 \usepackage{helvetic}
 
-...just type in the word 
+...just type in the word
 
 helvetic
 
@@ -1013,7 +1013,7 @@ This is not only for \ref and \cite but general tool for completion of
 LaTeX commands. It looks for bibtex definitiots after \cite{, \label
 definitions after \ref{, opens explorer after \input{ and similar
 commands (in explorer just press <Cr> on file name and it will be
-inserted in document with relative path), and offers menu 
+inserted in document with relative path), and offers menu
 after eg \bibliographystyle{.
 
 ++>
@@ -1113,7 +1113,7 @@ taking care about Macros, Templates and Packages.
                         used command (equal to -2).
 
                 Command accepts also latexSuite mappings (|latex-macros|)
-                without preceding S and in lowercase: 
+                without preceding S and in lowercase:
                         :TSection pa
                 will result in \part{}. It is possible to use full names of
                 sections:
@@ -1234,35 +1234,35 @@ Math Keymaps Cheat sheet: (2 key pattern)
 Lower case Greek letters	        Upper case Greek letters
 hotkey      Greek Letter           hotkey    Greek Letter
 ------------------------------------------------------------
-`a             \alpha    	        `A             \Alpha  
-`b              \beta    	        `B              \Beta  
-`g             \gamma    	        `G             \Gamma  
-`d             \delta    	        `D             \Delta  
-`e        \varepsilon    	        `E           \Epsilon  
-`z              \zeta    	        `Z         \mathrm{Z}  
-`h               \eta    	        `H               \Eta  
+`a             \alpha    	        `A             \Alpha
+`b              \beta    	        `B              \Beta
+`g             \gamma    	        `G             \Gamma
+`d             \delta    	        `D             \Delta
+`e        \varepsilon    	        `E           \Epsilon
+`z              \zeta    	        `Z         \mathrm{Z}
+`h               \eta    	        `H               \Eta
 `q             \theta    	         -                 -
 `i              \iota    	         -                 -
 `k             \kappa    	         -                 -
-`l            \lambda    	        `L            \Lambda  
-`m                \mu    	        `M                \Mu  
-`n                \nu    	        `N                \Nu  
-`x                \xi    	        `X                \Xi  
-`p                \pi    	        `P                \Pi  
-`r               \rho    	        `R               \Rho  
-`s             \sigma    	        `S             \Sigma  
+`l            \lambda    	        `L            \Lambda
+`m                \mu    	        `M                \Mu
+`n                \nu    	        `N                \Nu
+`x                \xi    	        `X                \Xi
+`p                \pi    	        `P                \Pi
+`r               \rho    	        `R               \Rho
+`s             \sigma    	        `S             \Sigma
 `v          \varsigma    	         -                 -
-`t               \tau    	        `T               \Tau  
-`u           \upsilon    	        `U           \Upsilon  
-`f            \varphi               -                 -	
-`c               \chi    	        `C               \Chi  
-`y               \psi    	        `Y               \Psi  
-`w             \omega    	        `W             \Omega  
+`t               \tau    	        `T               \Tau
+`u           \upsilon    	        `U           \Upsilon
+`f            \varphi               -                 -
+`c               \chi    	        `C               \Chi
+`y               \psi    	        `Y               \Psi
+`w             \omega    	        `W             \Omega
 ------------------------------------------------------------
-	
-	
+
+
 ---------------------------------------------------------
-Math Symbols:	
+Math Symbols:
 hotkey      Greek Letter           hotkey    Greek Letter
 ---------------------------------------------------------
 `(            \subset              `&             \wedge
@@ -1348,7 +1348,7 @@ In Visual mode enclose selected area in environment "borders"
    Hotkey                           Hotkey
 Insert   Visual   Environment    Insert   Visual   Environment
 ------------------------------   ---------------------------------
-ELI      ,li      list        	EQN      ,qn      quotation   
+ELI      ,li      list        	EQN      ,qn      quotation
 EDE      ,de      description 	ESB      ,sb      sloppybar
 EEN      ,en      enumerate   	ETI      ,ti      theindex
 EIT      ,it      itemize     	ETP      ,tp      titlepage

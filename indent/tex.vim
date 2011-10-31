@@ -10,7 +10,7 @@
 " URL: comming soon: http://www.unet.univie.ac.at/~a9925098/vim/indent/tex.vim
 
 " --> If you're a Vim guru & and you find something that could be done in a
-"     better (perhaps in a more Vim-ish or Vi-ish) way, please let me know! 
+"     better (perhaps in a more Vim-ish or Vi-ish) way, please let me know!
 
 " Options: {{{
 "
@@ -22,26 +22,26 @@
 "
 "   If this variable is set, item-environments are indented like Emacs does
 "   it, i.e., continuation lines are indented with a shiftwidth.
-"   
+"
 "   NOTE: I've already set the variable below; delete the corresponding line
 "   if you don't like this behaviour.
 "
 "   Per default, it is unset.
-"   
+"
 "              set                                unset
 "   ----------------------------------------------------------------
-"       \begin{itemize}                      \begin{itemize}  
+"       \begin{itemize}                      \begin{itemize}
 "         \item blablabla                      \item blablabla
-"           bla bla bla                        bla bla bla  
+"           bla bla bla                        bla bla bla
 "         \item blablabla                      \item blablabla
-"           bla bla bla                        bla bla bla  
-"       \end{itemize}                        \end{itemize}    
+"           bla bla bla                        bla bla bla
+"       \end{itemize}                        \end{itemize}
 "
 "
 "   This option applies to itemize, description, enumerate, and
 "   thebibliography.
 "
-" }}} 
+" }}}
 
 " Delete the next line to avoid the special indention of items
 if !exists("g:tex_indent_items")
@@ -72,7 +72,7 @@ function GetTeXIndent()
   let lnum = prevnonblank(v:lnum - 1)
 
   " At the start of the file use zero indent.
-  if lnum == 0 | return 0 
+  if lnum == 0 | return 0
   endif
 
   let ind = indent(lnum)
@@ -86,9 +86,9 @@ function GetTeXIndent()
 
   " Add a 'shiftwidth' after beginning of environments.
   " Don't add it for \begin{document}, \begin{verbatim} and \begin{comment}
-  ""if line =~ '^\s*\\begin{\(.*\)}'  && line !~ 'verbatim' 
+  ""if line =~ '^\s*\\begin{\(.*\)}'  && line !~ 'verbatim'
   " LH modification : \begin does not always start a line
-  if line =~ '\\begin{\(.*\)}'  && line !~ 'verbatim' 
+  if line =~ '\\begin{\(.*\)}'  && line !~ 'verbatim'
         \ && line !~ 'document'
         \ && line !~ 'comment'
 
@@ -102,9 +102,9 @@ function GetTeXIndent()
     endif
   endif
 
-  
+
   " Subtract a 'shiftwidth' when an environment ends
-  if cline =~ '^\s*\\end' && cline !~ 'verbatim' 
+  if cline =~ '^\s*\\end' && cline !~ 'verbatim'
         \&& cline !~ 'document'
         \&& cline !~ 'comment'
 
@@ -118,19 +118,19 @@ function GetTeXIndent()
     let ind = ind - &sw
   endif
 
-  
+
   " Special treatment for 'item'
   " ----------------------------
-  
+
   if g:tex_indent_items == 1
 
     " '\item' or '\bibitem' itself:
-    if cline =~ '^\s*\\\(bib\)\=item' 
+    if cline =~ '^\s*\\\(bib\)\=item'
       let ind = ind - &sw
     endif
 
     " lines following to '\item' are intented once again:
-    if line =~ '^\s*\\\(bib\)\=item' 
+    if line =~ '^\s*\\\(bib\)\=item'
       let ind = ind + &sw
     endif
 

@@ -1,7 +1,7 @@
 "        File: wizardfuncs.vim
 "      Author: Mikolaj Machowski <mikmach@wp.pl>
-" Description: 
-" 
+" Description:
+"
 " Installation:
 "      History: pluginized by Srinath Avadhanula
 "=============================================================================
@@ -14,7 +14,7 @@ let s:doneOnce = 1
 let s:mapleader = exists('mapleader') ? mapleader : "\\"
 " ==============================================================================
 " Specialized functions for handling sections from command line
-" ============================================================================== 
+" ==============================================================================
 
 com! -nargs=? TSection call Tex_section(<f-args>)
 com! -nargs=? TSectionAdvanced call Tex_section_adv(<f-args>)
@@ -33,7 +33,7 @@ function! Tex_VisSecAdv(section)
 		let shorttitle = '['.shorttitle.']'
 	endif
 	exe "normal `>a}\<cr>\<esc>`<i".sstructure.toc.shorttitle."{"
-endfunction 
+endfunction
 
 " }}}
 " Tex_InsSecAdv: section wizard in insert mode {{{
@@ -56,8 +56,8 @@ function! Tex_InsSecAdv(structure)
 	"Title
 	let ttitle = '{'.ttitle.'}'
 	"Happy end?
-	return sstructure.toc.shorttitle.ttitle 
-endfunction 
+	return sstructure.toc.shorttitle.ttitle
+endfunction
 
 " }}}
 function! Tex_section(...) "{{{
@@ -201,7 +201,7 @@ endfunction "}}}
 
 " ==============================================================================
 " Add looking help into latexhelp.txt
-" ============================================================================== 
+" ==============================================================================
 
 inoremap <silent> <Plug>Tex_Help <C-o>:call <SID>TexHelp()<CR>
 nnoremap <silent> <Plug>Tex_Help :call <SID>TexHelp()<CR>
@@ -235,7 +235,7 @@ endfunction " }}}
 
 " ==============================================================================
 " Tables of shortcuts
-" ============================================================================== 
+" ==============================================================================
 "
 command! -nargs=? Tshortcuts call Tex_shortcuts(<f-args>)<CR>
 

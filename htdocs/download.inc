@@ -11,7 +11,7 @@ vim-latex</a> page.
 <h4>Step 1 of 4: Download and extract the archives</h4>
 Extract one of the archives above into your <tt>~/vimfiles</tt> directory
 (if you are using windows) or <tt>~/.vim</tt> directory (if you are using
-*nix). 
+*nix).
 <p>If you are updating after a long time, it might be a good idea to remove
 the <tt>~/vimfiles/ftplugin/latex-suite</tt> directory from previous
 installations before reinstalling.</p>
@@ -48,7 +48,7 @@ follow the instructions that are linked in the navigation bar.
 <p>
 If you have already have a system of filetype specific files (ftplugin,
 indent etc) files set up for the 'tex' filetype, then please make sure that
-Latex-Suite does not over-write your files. 
+Latex-Suite does not over-write your files.
 </p>
 
 The archive above will unzip in the following manner:<br>
@@ -87,6 +87,6 @@ unpack the archive into a temporary folder and then copy over the files
 which you need. Note however, that this is not supported. You will have to
 take care of the bugs which you encounter because of this yourself.
 
-<!-- 
-vim:ft=php 
+<!--
+vim:ft=php
 -->

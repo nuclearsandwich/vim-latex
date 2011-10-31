@@ -3,13 +3,13 @@ if exists("chapterbib_package_file")
 endif
 let chapterbib_package_file = 1
 
-let g:TeX_package_option_chapterbib = 
+let g:TeX_package_option_chapterbib =
 \ 'sectionbib,'
 \.'rootbib,'
 \.'gather,'
 \.'duplicate'
 
-let g:TeX_package_chapterbib = 
+let g:TeX_package_chapterbib =
 \ 'env:cbunit,'
 \.'brd:sectionbib,'
 \.'bra:cbinput,'

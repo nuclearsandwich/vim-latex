@@ -2,10 +2,10 @@
 " 	     File: templates.vim
 "      Author: Gergely Kontra
 "              (minor modifications by Srinath Avadhanula)
-"              (plus other modifications by Mikolaj Machowski) 
-" 	  Version: 1.0 
+"              (plus other modifications by Mikolaj Machowski)
+" 	  Version: 1.0
 "     Created: Tue Apr 23 05:00 PM 2002 PST
-" 
+"
 "  Description: functions for handling templates in latex-suite/templates
 "               directory.
 "=============================================================================
@@ -25,7 +25,7 @@ function! <SID>SetTemplateMenu()
 			\":call <SID>ReadTemplate('".fname."')<CR>"
 		let i = i + 1
 	endwhile
-endfunction 
+endfunction
 
 if g:Tex_Menus
 	call <SID>SetTemplateMenu()
@@ -38,10 +38,10 @@ function! <SID>ReadTemplate(...)
 		let filename = a:1
 	else
 		let filelist = Tex_FindInRtp('', 'templates')
-		let filename = 
-					\ Tex_ChooseFromPrompt("Choose a template file:\n" . 
-					\ Tex_CreatePrompt(filelist, 2, ',') . 
-					\ "\nEnter number or name of file :", 
+		let filename =
+					\ Tex_ChooseFromPrompt("Choose a template file:\n" .
+					\ Tex_CreatePrompt(filelist, 2, ',') .
+					\ "\nEnter number or name of file :",
 					\ filelist, ',')
 	endif
 
@@ -69,7 +69,7 @@ function! <SID>ReadTemplate(...)
 	" the text into @a and paste it using IMAP_PutTextWithMovement().
 	let _a = @a
 	normal! ggVG"ax
-	
+
 	let _fo = &fo
 	" Since IMAP_PutTextWithMovement simulates the key-presses, leading
 	" indendatation can get duplicated in strange ways if ``fo`` is non-empty.
@@ -98,7 +98,7 @@ function! <SID>ProcessTemplate()
 		exec 'silent! %s/^'.s:comTemp.'\(\_.\{-}\)'.s:comTemp.'$/\=<SID>Compute(submatch(1))/ge'
 		exec 'silent! %s/'.s:exeTemp.'\(.\{-}\)'.s:exeTemp.'/\=<SID>Exec(submatch(1))/ge'
 		exec 'silent! g/'.s:comTemp.s:comTemp.'/d'
-		
+
 		" A function only puts one item into the search history...
 		call Tex_CleanSearchHistory()
 	endif
@@ -136,7 +136,7 @@ if v:version >= 602
 		return tmplnames
 	endfunction
 	" }}}
-	
+
 else
 	com! -nargs=? TTemplate :call <SID>ReadTemplate(<f-args>)
 		\| :startinsert

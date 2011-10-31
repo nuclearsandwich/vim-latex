@@ -12,13 +12,13 @@ inoremap <buffer> <silent> <C-_> <C-r>=CompleteTag()<CR>
 vnoremap <buffer> <silent> <C-_> <C-\><C-N>:call EncloseSelection()<CR>
 
 " CompleteTag: makes a tag from last word {{{
-" Description: 
+" Description:
 
 let b:unaryTags = 'br,par'
 
 function! CompleteTag()
 	let line = strpart(getline('.'), 0, col('.')-1)
-	
+
 	let word = matchstr(line, '\w\+$')
 	if word != ''
 		let back = substitute(word, '.', "\<BS>", 'g')

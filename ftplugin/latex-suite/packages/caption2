@@ -3,7 +3,7 @@ if exists("caption2_package_file")
 endif
 let caption2_package_file = 1
 
-let g:TeX_package_option_caption2 = 
+let g:TeX_package_option_caption2 =
 \ 'scriptsize,'
 \.'footnotesize,'
 \.'small,'
@@ -33,7 +33,7 @@ let g:TeX_package_option_caption2 =
 \.'indent,'
 \.'longtable'
 
-let g:TeX_package_caption2 = 
+let g:TeX_package_caption2 =
 \ 'bra:captionsize,'
 \.'bra:captionfont,'
 \.'bra:captionlabelfont,'

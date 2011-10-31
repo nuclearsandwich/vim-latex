@@ -1,9 +1,9 @@
 "=============================================================================
 " 	     File: custommacros.vim
 "      Author: Mikolaj Machowski
-" 	  Version: 1.0 
+" 	  Version: 1.0
 "     Created: Tue Apr 23 05:00 PM 2002 PST
-" 
+"
 "  Description: functions for processing custom macros in the
 "               latex-suite/macros directory
 "=============================================================================
@@ -40,7 +40,7 @@ function! <SID>SetCustomMacrosMenu()
 		exe "nmenu ".g:Tex_MacrosMenuLocation."&".i.":<tab>".fname." i<C-r>=<SID>ReadMacro('".fname."')<CR>"
 		let i = i + 1
 	endwhile
-endfunction 
+endfunction
 
 if g:Tex_Menus
 	call <SID>SetCustomMacrosMenu()
@@ -88,15 +88,15 @@ endfunction
 
 " }}}
 " ChooseMacro: choose a macro file {{{
-" " Description: 
+" " Description:
 function! s:ChooseMacro(ask)
 	let filelist = Tex_FindInRtp('', 'macros')
 	let filename = Tex_ChooseFromPrompt(
-				\ a:ask."\n" . 
+				\ a:ask."\n" .
 				\ Tex_CreatePrompt(filelist, 2, ',') .
 				\ "\nEnter number or filename :",
 				\ filelist, ',')
-endfunction 
+endfunction
 
 " }}}
 " DeleteMacro: deletes macro file {{{
@@ -131,7 +131,7 @@ function! <SID>EditMacro(...)
 	endif
 
 	if filereadable(s:macrodirpath.filename)
-		" If file exists in local directory open it. 
+		" If file exists in local directory open it.
 		exec 'split '.Tex_EscapeSpaces(s:macrodirpath.filename)
 	else
 		" But if file doesn't exist in local dir it probably is in user
@@ -170,7 +170,7 @@ function! <SID>EditMacro(...)
 				exe 'write '.s:macrodirpath.filename.'-local'
 			endif
 		endif
-		
+
 	endif
 	setlocal filetype=tex
 endfunction
@@ -184,10 +184,10 @@ function! <SID>ReadMacro(...)
 		let filename = a:1
 	else
 		let filelist = Tex_FindInRtp('', 'macros')
-		let filename = 
-					\ Tex_ChooseFromPrompt("Choose a macro file:\n" . 
-					\ Tex_CreatePrompt(filelist, 2, ',') . 
-					\ "\nEnter number or name of file :", 
+		let filename =
+					\ Tex_ChooseFromPrompt("Choose a macro file:\n" .
+					\ Tex_CreatePrompt(filelist, 2, ',') .
+					\ "\nEnter number or name of file :",
 					\ filelist, ',')
 	endif
 
@@ -220,7 +220,7 @@ endfunction
 com! -nargs=? TMacroNew :call <SID>NewMacro(<f-args>)
 
 " This macros had to have 2 versions:
-if v:version >= 602 
+if v:version >= 602
 	com! -complete=custom,Tex_CompleteMacroName -nargs=? TMacro
 				\ :let s:retVal = <SID>ReadMacro(<f-args>) <bar> normal! i<C-r>=s:retVal<CR>
 	com! -complete=custom,Tex_CompleteMacroName -nargs=? TMacroEdit

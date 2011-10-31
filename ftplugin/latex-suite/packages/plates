@@ -5,7 +5,7 @@ let plates_package_file = 1
 
 let g:TeX_package_option_plates = 'figures,onefloatperpage,memoir'
 
-let g:TeX_package_plates = 
+let g:TeX_package_plates =
 \ 'env:plate,'
 \.'listofplates,'
 \.'ProcessPlates,'

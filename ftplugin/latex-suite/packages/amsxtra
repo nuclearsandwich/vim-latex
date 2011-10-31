@@ -5,7 +5,7 @@ let amsxtra_package_file = 1
 
 let g:TeX_package_option_amsxtra = ''
 
-let g:TeX_package_amsxtra = 
+let g:TeX_package_amsxtra =
 \ 'nor:sphat,'
 \.'nor:sptilde'
 

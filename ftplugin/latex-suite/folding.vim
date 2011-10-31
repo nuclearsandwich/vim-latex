@@ -3,20 +3,20 @@
 "      Author: Srinath Avadhanula
 "      		   modifications/additions by Zhang Linbo
 "     Created: Tue Apr 23 05:00 PM 2002 PST
-" 
+"
 "  Description: functions to interact with Syntaxfolds.vim
 "=============================================================================
 
 nnoremap <unique> <Plug>Tex_RefreshFolds :call MakeTexFolds(1)<cr>
 
 augroup LatexSuite
-	au LatexSuite User LatexSuiteFileType 
-		\ call Tex_Debug('folding.vim: catching LatexSuiteFileType', 'fold') | 
+	au LatexSuite User LatexSuiteFileType
+		\ call Tex_Debug('folding.vim: catching LatexSuiteFileType', 'fold') |
 		\ call Tex_SetFoldOptions()
 augroup END
 
 " Tex_SetFoldOptions: sets maps for every buffer {{{
-" Description: 
+" Description:
 function! Tex_SetFoldOptions()
 	if exists('b:doneSetFoldOptions')
 		return
@@ -116,7 +116,7 @@ function! MakeTexFolds(force)
 	elseif g:Tex_FoldedEnvironments =~ ',$'
 		let g:Tex_FoldedEnvironments = g:Tex_FoldedEnvironments . s
 	endif
-	
+
     if !exists('g:Tex_FoldedSections')
 		let g:Tex_FoldedSections = 'part,chapter,section,'
 								\. 'subsection,subsubsection,paragraph'
@@ -135,7 +135,7 @@ function! MakeTexFolds(force)
 	"
 	" Each of the following function calls defines a syntax fold region. Each
 	" definition consists of a call to the AddSyntaxFoldItem() function.
-	" 
+	"
 	" The order in which the folds are defined is important. Juggling the
 	" order of the function calls will create havoc with folding. The
 	" "deepest" folding item needs to be called first. For example, if
@@ -195,7 +195,7 @@ function! MakeTexFolds(force)
 	"    endskip: the pattern which defines the end of the "skip" pattern for
 	"             nested folds.
 	"
-	"    Example: 
+	"    Example:
 	"    1. A syntax fold region for a latex section is
 	"           startpat = "\\section{"
 	"           endpat   = "\\section{"
@@ -218,14 +218,14 @@ function! MakeTexFolds(force)
 	"
 	" }}}
 	" ========================================================================
-	
+
 	" {{{ comment lines
 	if g:Tex_FoldedMisc =~ '\<comments\>'
 		call AddSyntaxFoldItem (
 			\ '^%\([^%]\|[^f]\|[^a]\|[^k]\|[^e]\)',
 			\ '^[^%]',
 			\ 0,
-			\ -1 
+			\ -1
 			\ )
 	endif
 	" }}}
@@ -253,7 +253,7 @@ function! MakeTexFolds(force)
 			\ )
 	endif
 	" }}}
- 
+
 	" Commands and Environments {{{
 	" Fold the commands and environments in 2 passes.
 	let pass = 0
@@ -278,7 +278,7 @@ function! MakeTexFolds(force)
 					" terminated on the same line will not start a fold.
 					" However, it will also refuse to fold certain commands
 					" which have not terminated. eg:
-					" 	\commandname{something \bf{text} and 
+					" 	\commandname{something \bf{text} and
 					" will _not_ start a fold.
 					" In other words, the pattern is safe, but not exact.
 					call AddSyntaxFoldItem('^\s*\\'.s.'{[^{}]*$','^[^}]*}',0,0)
@@ -292,14 +292,14 @@ function! MakeTexFolds(force)
 	" }}}
 
 	" Sections {{{
-	if g:Tex_FoldedSections != '' 
+	if g:Tex_FoldedSections != ''
 		call Tex_FoldSections(g:Tex_FoldedSections,
 			\ '^\s*\\frontmatter\|^\s*\\mainmatter\|^\s*\\backmatter\|'
 			\. '^\s*\\begin{thebibliography\|>>>\|^\s*\\endinput\|'
 			\. '^\s*\\begin{slide\|^\s*\\end{document')
 	endif
-	" }}} 
-	
+	" }}}
+
 	" {{{ slide
 	if g:Tex_FoldedMisc =~ '\<slide\>'
 		call AddSyntaxFoldItem (
@@ -317,7 +317,7 @@ function! MakeTexFolds(force)
 			\ '^\s*\\document\(class\|style\).*{',
 			\ '^\s*\\begin{document}',
 			\ 0,
-			\ -1 
+			\ -1
 			\ )
 	endif
 	" }}}
@@ -332,7 +332,7 @@ function! MakeTexFolds(force)
 			\ )
 	endif
 	" }}}
-	
+
 	call MakeSyntaxFolds(a:force)
 	normal! zv
 endfunction

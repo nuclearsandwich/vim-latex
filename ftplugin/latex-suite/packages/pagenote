@@ -11,7 +11,7 @@ if exists("pagenote_package_file")
 endif
 let pagenote_package_file = 1
 
-let g:TeX_package_option_pagenote = 
+let g:TeX_package_option_pagenote =
 \ 'continuous,'
 \.'page'
 

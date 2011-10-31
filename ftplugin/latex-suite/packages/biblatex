@@ -11,7 +11,7 @@ if exists("biblatex_package_file")
 endif
 let biblatex_package_file = 1
 
-let g:TeX_package_option_biblatex = 
+let g:TeX_package_option_biblatex =
 \ 'style=,'
 \.'citestyle=,'
 \.'bibstyle=,'

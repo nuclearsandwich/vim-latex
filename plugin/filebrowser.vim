@@ -21,7 +21,7 @@ set cpo&vim
 " Globally visible functions (API)
 "======================================================================
 " FB_OpenFileBrowser: opens a new buffer and displays the file list {{{
-" Description: 
+" Description:
 function! FB_OpenFileBrowser(dir)
 	if !isdirectory(a:dir)
 		return
@@ -39,7 +39,7 @@ function! FB_OpenFileBrowser(dir)
 	call FB_DisplayFiles(a:dir)
 endfunction " }}}
 " FB_DisplayFiles: displays the files in a given directory {{{
-" Description: 
+" Description:
 " 	Call this function only when the cursor is in a temporary buffer
 function! FB_DisplayFiles(dir)
 	if !isdirectory(a:dir)
@@ -103,14 +103,14 @@ function! FB_DisplayFiles(dir)
 	call s:FB_ResetSilentSettings()
 endfunction " }}}
 " FB_SetVar: sets script local variables from outside this script {{{
-" Description: 
+" Description:
 function! FB_SetVar(varname, value)
 	let s:{a:varname} = a:value
 endfunction " }}}
 
 " ==============================================================================
 " Script local functions below this
-" ============================================================================== 
+" ==============================================================================
 " FB_SetHighlighting: sets syntax highlighting for the buffer {{{
 " Description:
 " Origin: from explorer.vim in vim
@@ -139,7 +139,7 @@ function! <SID>FB_SetHighlighting()
 	endif
 endfunction " }}}
 " FB_SetMaps: sets buffer local maps {{{
-" Description: 
+" Description:
 function! <SID>FB_SetMaps()
 	nnoremap <buffer> <silent> q :bdelete<cr>
 	nnoremap <buffer> <silent> C :call FB_DisplayFiles(getcwd())<CR>
@@ -151,21 +151,21 @@ function! <SID>FB_SetMaps()
 	nnoremap <buffer> <C-w> <nop>
 endfunction " }}}
 " FB_SetSilentSettings: some settings which make things silent {{{
-" Description: 
+" Description:
 " Origin: from explorer.vim distributed with vim.
 function! <SID>FB_SetSilentSettings()
 	let s:save_report=&report
 	let s:save_showcmd = &sc
 	set report=10000 noshowcmd
-endfunction 
+endfunction
 " FB_ResetSilentSettings: reset settings set by FB_SetSilentSettings
-" Description: 
+" Description:
 function! <SID>FB_ResetSilentSettings()
 	let &report=s:save_report
 	let &showcmd = s:save_showcmd
 endfunction " }}}
 " FB_SetScratchSettings: makes the present buffer a scratch buffer {{{
-" Description: 
+" Description:
 function! <SID>FB_SetScratchSettings()
 	" Turn off the swapfile, set the buffer type so that it won't get
 	" written, and so that it will get deleted when it gets hidden.
@@ -175,22 +175,22 @@ function! <SID>FB_SetScratchSettings()
 	setlocal bufhidden=delete
 	" Don't wrap around long lines
 	setlocal nowrap
-endfunction 
+endfunction
 
 " }}}
 " FB_ToggleHelp: toggles verbosity of help {{{
-" Description: 
+" Description:
 function! <SID>FB_ToggleHelp()
 	let s:FB_VerboseHelp = 1 - s:FB_GetVar('FB_VerboseHelp', 0)
 
 	call FB_DisplayFiles('.')
 endfunction " }}}
 " FB_DisplayHelp: displays a helpful header {{{
-" Description: 
+" Description:
 function! <SID>FB_DisplayHelp()
 	let verboseHelp = s:FB_GetVar('FB_VerboseHelp', 0)
 	if verboseHelp
-		let txt = 
+		let txt =
 			\  "\" <cr>: on file, choose the file and quit\n"
 			\ ."\"       on dir, enter directory\n"
 			\ ."\" q/<esc>: quit without choosing\n"
@@ -204,7 +204,7 @@ function! <SID>FB_DisplayHelp()
 	0put!=txt
 endfunction " }}}
 " FB_EditEntry: handles the user pressing <enter> on a line {{{
-" Description: 
+" Description:
 function! <SID>FB_EditEntry()
 	let line = getline('.')
 
@@ -215,7 +215,7 @@ function! <SID>FB_EditEntry()
 	" If the user has a call back function defined on choosing a file, handle
 	" it.
 	let cbf = s:FB_GetVar('FB_CallBackFunction', '')
-	if cbf != '' && line !~ '^" ' && filereadable(line) 
+	if cbf != '' && line !~ '^" ' && filereadable(line)
 		let fname = fnamemodify(line, ':p')
 		bdelete
 

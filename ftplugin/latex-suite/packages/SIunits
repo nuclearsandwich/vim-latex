@@ -3,7 +3,7 @@ if exists("SIunits_package_file")
 endif
 let SIunits_package_file = 1
 
-let g:TeX_package_SIunits = 
+let g:TeX_package_SIunits =
 \'nor:addprefix,'.
 \'nor:addunit,'.
 \'nor:ampere,'.
@@ -294,7 +294,7 @@ let g:TeX_package_SIunits =
 \'nor:zetta,'.
 \'nor:zettad'
 
-let g:TeX_package_option_SIunits = 
+let g:TeX_package_option_SIunits =
 \'amssymb,'.
 \'binary,'.
 \'cdot,'.

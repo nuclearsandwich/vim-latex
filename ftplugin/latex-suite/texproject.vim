@@ -1,9 +1,9 @@
 "=============================================================================
 " 	     File: texproject.vim
 "      Author: Mikolaj Machowski
-" 	  Version: 1.0 
+" 	  Version: 1.0
 "     Created: Wen Apr 16 05:00 PM 2003
-" 
+"
 "  Description: Handling tex projects.
 "=============================================================================
 
@@ -41,12 +41,12 @@ function! Tex_ProjectLoad()
 		call Tex_Debug("Tex_ProjectLoad: sourcing [".Tex_GetMainFileName().".latexmain]", "proj")
                exec 'source '.fnameescape(Tex_GetMainFileName().'.latexmain')
 	endif
-	
+
 	exe 'cd '.s:origdir
 endfunction " }}}
 
 augroup LatexSuite
-	au LatexSuite User LatexSuiteFileType 
+	au LatexSuite User LatexSuiteFileType
 		\ call Tex_Debug("texproject.vim: catching LatexSuiteFileType event", "proj") |
 		\ call Tex_ProjectLoad()
 augroup END

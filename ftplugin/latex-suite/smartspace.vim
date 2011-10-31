@@ -2,15 +2,15 @@
 " 	     File: smartspace.vim
 "      Author: Carl Muller
 "     Created: Fri Dec 06 12:00 AM 2002 PST
-" 
-" Description: 
+"
+" Description:
 "     Maps the <space> key in insert mode so that mathematical formulaes are
 "     always kept on the same line. i.e, $$'s dont get broken across multiple
 "     lines.
 "=============================================================================
 
 " Avoid reinclusion or if the user doesn't want us.
-if exists('b:done_smartspace') 
+if exists('b:done_smartspace')
 	\ || (exists('g:Tex_SmartKeySpace') && !g:Tex_SmartKeySpace)
 	finish
 endif
@@ -18,7 +18,7 @@ let b:done_smartspace = 1
 
 " Smart space relies on taking over vim's insertion of carriage returns in
 " order to keep $$'s on the same line. The only way to get vim not to break
-" lines is to set tw=0. 
+" lines is to set tw=0.
 "
 " NOTE: setting tw != 0 will break smartspace
 "       the user's 'tw' setting is still respected in the insert mode.
@@ -35,7 +35,7 @@ if exists('*s:TexFill')
 endif
 
 " TexFormatLine: format line retaining $$'s on the same line. {{{
-function! s:TexFill(width) 
+function! s:TexFill(width)
 	if a:width != 0 && col(".") > a:width
 		" For future use, record the current line and the number of the current column
 		let current_line = getline(".")

@@ -3,7 +3,7 @@ if exists("graphicx_package_file")
 endif
 let graphicx_package_file = 1
 
-let g:TeX_package_option_graphicx = 
+let g:TeX_package_option_graphicx =
 \ 'sbr:Drivers,'
 \.'xdvi,'
 \.'dvipdf,'

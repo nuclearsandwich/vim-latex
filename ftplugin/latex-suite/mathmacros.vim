@@ -2,7 +2,7 @@
 " 	     File: mathmacros.vim
 "      Author: Mikolaj Machowski
 "     Created: Tue Apr 23 06:00 PM 2002 PST
-" 
+"
 "  Description: macros for everything mathematical in latex.
 "=============================================================================
 
@@ -158,7 +158,7 @@ exe s:pA2.'psi<Tab>`y               <plug>\psi '
 exe s:pA2.'omega<Tab>`w             <plug>\omega '
 " }}}
 " Greek Letters big {{{
-let s:pA3 = s:pA.'&Greek.&Big.' 
+let s:pA3 = s:pA.'&Greek.&Big.'
 exe s:pA3.'Alpha<Tab>`A             <plug>\Alpha '
 exe s:pA3.'Beta<Tab>`B              <plug>\Beta '
 exe s:pA3.'Gamma<Tab>`G             <plug>\Gamma '
@@ -184,7 +184,7 @@ exe s:pA3.'Psi<Tab>`Y               <plug>\Psi '
 exe s:pA3.'Omega<Tab>`W             <plug>\Omega '
 " }}}
 " BinaryRel1 {{{
-let s:pA4 = s:pA."&BinaryRel1."  
+let s:pA4 = s:pA."&BinaryRel1."
 exe s:pA4.'ll                       <plug>\ll '
 exe s:pA4.'lll                      <plug>\lll '
 exe s:pA4.'leqslant                 <plug>\leqslant '
@@ -218,8 +218,8 @@ exe s:pA4.'models                   <plug>\models '
 exe s:pA4.'therefore                <plug>\therefore '
 exe s:pA4.'backepsilon              <plug>\backepsilon '
 " }}}
-" nBinaryRel1 {{{ 
-let s:pA4a = s:pA."&nBinaryRel1."  
+" nBinaryRel1 {{{
+let s:pA4a = s:pA."&nBinaryRel1."
 exe s:pA4a.'nless                   <plug>\nless '
 exe s:pA4a.'nleqslant               <plug>\nleqslant '
 exe s:pA4a.'nleq                    <plug>\nleq '
@@ -246,8 +246,8 @@ exe s:pA4a.'nshortparallel          <plug>\nshortparallel '
 exe s:pA4a.'nvdash                  <plug>\nvdash '
 exe s:pA4a.'nvDash                  <plug>\nvDash '
 " }}}
-" BinaryRel2 {{{ 
-let s:pA5 = s:pA."&BinaryRel2."  
+" BinaryRel2 {{{
+let s:pA5 = s:pA."&BinaryRel2."
 exe s:pA5.'gg                       <plug>\gg '
 exe s:pA5.'ggg                      <plug>\ggg '
 exe s:pA5.'gggtr                    <plug>\gggtr '
@@ -308,7 +308,7 @@ exe s:pA5a.'nshortmid               <plug>\nshortmid '
 exe s:pA5a.'nVdash                  <plug>\nVdash '
 " }}}
 " {{{ BinaryRel3
-let s:pA6 = s:pA."&BinaryRel3."  
+let s:pA6 = s:pA."&BinaryRel3."
 exe s:pA6.'doteq                    <plug>\doteq '
 exe s:pA6.'circeq                   <plug>\circeq '
 exe s:pA6.'eqcirc                   <plug>\eqcirc '
@@ -353,7 +353,7 @@ exe s:pA6a.'ntriangleright          <plug>\ntriangleright '
 exe s:pA6a.'ntrianglerighteq        <plug>\ntrianglerighteq '
 " }}}
 " {{{ BinaryRel4
-let s:pA7 = s:pA."&BinaryRel4."  
+let s:pA7 = s:pA."&BinaryRel4."
 exe s:pA7.'lessgtr                  <plug>\lessgtr '
 exe s:pA7.'gtrless                  <plug>\gtrless '
 exe s:pA7.'lesseqgtr                <plug>\lesseqgtr '

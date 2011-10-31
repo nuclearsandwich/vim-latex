@@ -5,7 +5,7 @@ let array_package_file = 1
 
 let g:TeX_package_option_array = ''
 
-let g:TeX_package_array  = 
+let g:TeX_package_array  =
 \ 'brs:newcolumntype{<+type+>}[<+no+>]{<+preamble+>},'
 \.'arraycolsep,'
 \.'tabcolsep,'

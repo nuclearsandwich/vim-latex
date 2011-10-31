@@ -3,7 +3,7 @@ if exists("lineno_package_file")
 endif
 let lineno_package_file = 1
 
-let g:TeX_package_option_lineno = 
+let g:TeX_package_option_lineno =
 \ 'left,'
 \.'right,'
 \.'switch,'
@@ -15,7 +15,7 @@ let g:TeX_package_option_lineno =
 \.'displaymath,'
 \.'hyperref'
 
-let g:TeX_package_lineno = 
+let g:TeX_package_lineno =
 \ 'sbr:Environments,'
 \.'env:linenumbers,'
 \.'env:linenumbers*,'

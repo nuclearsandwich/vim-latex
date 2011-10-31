@@ -2,7 +2,7 @@
 " 	     File: compiler.vim
 "      Author: Srinath Avadhanula
 "     Created: Tue Apr 23 05:00 PM 2002 PST
-" 
+"
 "  Description: functions for compiling/viewing/searching latex documents
 "=============================================================================
 
@@ -51,7 +51,7 @@ function! Tex_SetTeXCompilerTarget(type, target)
 					\'for more information',
 					\"&ok", 1, 'Warning')
 			else
-				call input( 
+				call input(
 					\'No '.a:type.' rule defined for target '.target."\n".
 					\'Please specify a rule in $VIMRUNTIME/ftplugin/tex/texrc'."\n".
 					\'     :help Tex_'.a:type.'Rule_format'."\n".
@@ -64,7 +64,7 @@ function! Tex_SetTeXCompilerTarget(type, target)
 		endif
 		exe 'cd '.s:origdir
 	endif
-endfunction 
+endfunction
 
 function! SetTeXTarget(...)
 	if a:0 < 1
@@ -87,7 +87,7 @@ com! -nargs=? TTarget :call SetTeXTarget(<f-args>)
 
 " }}}
 " Tex_CompileLatex: compiles the present file. {{{
-" Description: 
+" Description:
 function! Tex_CompileLatex()
 	if &ft != 'tex'
 		echo "calling Tex_RunLaTeX from a non-tex file"
@@ -150,8 +150,8 @@ endfunction " }}}
 " master tex file. in this case, make a file called mainfile.latexmain in the
 " directory containig the file. in other words, if the current file is
 " ~/thesis/chapter.tex
-" so that doing "latex chapter.tex" doesnt make sense, then make a file called 
-" main.tex.latexmain 
+" so that doing "latex chapter.tex" doesnt make sense, then make a file called
+" main.tex.latexmain
 " in the ~/thesis directory. this will then run "latex main.tex" when
 " Tex_RunLaTeX() is called.
 function! Tex_RunLaTeX()
@@ -204,7 +204,7 @@ function! Tex_RunLaTeX()
 
 		let i = i + 1
 	endwhile
-	
+
 	let s:target = initTarget
 	let s:origwinnum = winnr()
 	call Tex_SetupErrorWindow()
@@ -223,9 +223,9 @@ function! Tex_ViewLaTeX()
 		echo "calling Tex_ViewLaTeX from a non-tex file"
 		return
 	end
-	
+
 	let s:origdir = fnameescape(getcwd())
-	
+
 	" If b:fragmentFile is set, it means this file was compiled as a fragment
 	" using Tex_PartCompile, which means that we want to ignore any
 	" *.latexmain or makefile's.
@@ -292,7 +292,7 @@ function! Tex_ViewLaTeX()
 		endif
 
 		if( Tex_GetVarValue('Tex_ExecuteUNIXViewerInForeground') != 1 )
-			let execString = execString.' &' 
+			let execString = execString.' &'
 		endif
 
 	end
@@ -313,7 +313,7 @@ endfunction
 " Tex_ForwardSearchLaTeX: searches for current location in dvi file. {{{
 " Description: if the DVI viewer is compatible, then take the viewer to that
 "              position in the dvi file. see docs for Tex_RunLaTeX() to set a
-"              master file if this is an \input'ed file. 
+"              master file if this is an \input'ed file.
 " Tip: With YAP on Windows, it is possible to do forward and inverse searches
 "      on DVI files. to do forward search, you'll have to compile the file
 "      with the --src-specials option. then set the following as the command
@@ -331,7 +331,7 @@ function! Tex_ForwardSearchLaTeX()
 		return
 	endif
 	let viewer = Tex_GetVarValue('Tex_ViewRule_'.s:target)
-	
+
 	let s:origdir = fnameescape(getcwd())
 
 	let mainfname = Tex_GetMainFileName(':t')
@@ -340,7 +340,7 @@ function! Tex_ForwardSearchLaTeX()
 	" cd to the location of the file to avoid problems with directory name
 	" containing spaces.
 	call Tex_CD(Tex_GetMainFileName(':p:h'))
-	
+
 	" inverse search tips taken from Dimitri Antoniou's tip and Benji Fisher's
 	" tips on vim.sf.net (vim.sf.net tip #225)
 	if (has('win32') && (viewer == "yap" || viewer == "YAP" || viewer == "Yap"))
@@ -376,7 +376,7 @@ function! Tex_ForwardSearchLaTeX()
 
 			if Tex_GetVarValue('Tex_UseEditorSettingInDVIViewer') == 1 &&
 						\ exists('v:servername') &&
-						\ (viewer == "xdvi" || viewer == "xdvik") 
+						\ (viewer == "xdvi" || viewer == "xdvik")
 
 				let execString = 'silent! !'.viewer.' -name xdvi -sourceposition "'.line('.').' '.expand("%").'"'.
 							\ ' -editor "gvim --servername '.v:servername.' --remote-silent +\%l \%f" '.
@@ -408,7 +408,7 @@ function! Tex_ForwardSearchLaTeX()
 		" See if we should add &. On Mac (at least in MacVim), it seems
 		" like this should NOT be added...
 		if( Tex_GetVarValue('Tex_ExecuteUNIXViewerInForeground') != 1 )
-			let execString = execString.' &' 
+			let execString = execString.' &'
 		endif
 
 	endif
@@ -425,8 +425,8 @@ endfunction
 " }}}
 
 " ==============================================================================
-" Functions for compiling parts of a file. 
-" ============================================================================== 
+" Functions for compiling parts of a file.
+" ==============================================================================
 " Tex_PartCompile: compiles selected fragment {{{
 " Description: creates a temporary file from the selected fragment of text
 "       prepending the preamble and \end{document} and then asks Tex_RunLaTeX() to
@@ -473,7 +473,7 @@ function! Tex_PartCompile() range
 	" append the \end{document} line.
 	$ put ='\end{document}'
 	w
-	
+
 	" set this as a fragment file.
 	let b:fragmentFile = 1
 
@@ -499,7 +499,7 @@ endfunction " }}}
 
 " ==============================================================================
 " Compiling a file multiple times to resolve references/citations etc.
-" ============================================================================== 
+" ==============================================================================
 " Tex_CompileMultipleTimes: The main function {{{
 " Description: compiles a file multiple times to get cross-references right.
 function! Tex_CompileMultipleTimes()
@@ -509,8 +509,8 @@ function! Tex_CompileMultipleTimes()
 	let mainFileName_root = Tex_GetMainFileName(':p:t:r')
 	call Tex_CD(Tex_GetMainFileName(':p:h'))
 
-	" First ignore undefined references and the 
-	" "rerun to get cross-references right" message from 
+	" First ignore undefined references and the
+	" "rerun to get cross-references right" message from
 	" the compiler output.
 	let origlevel = Tex_GetVarValue('Tex_IgnoreLevel')
 	let origpats = Tex_GetVarValue('Tex_IgnoredWarnings')
@@ -534,9 +534,9 @@ function! Tex_CompileMultipleTimes()
 
 		" first run latex.
 		echomsg "latex run number : ".(runCount+1)
-		call Tex_Debug("Tex_CompileMultipleTimes: latex run number : ".(runCount+1), "comp") 
+		call Tex_Debug("Tex_CompileMultipleTimes: latex run number : ".(runCount+1), "comp")
 		silent! call Tex_CompileLatex()
-		
+
 		" If there are errors in any latex compilation step, immediately
 		" return. For now, do not bother with warnings because those might go
 		" away after compiling again or after bibtex is run etc.
@@ -627,14 +627,14 @@ function! Tex_GetAuxFile(auxFile)
 endfunction " }}}
 
 " ==============================================================================
-" Helper functions for 
+" Helper functions for
 " . viewing the log file in preview mode.
 " . syncing the display between the quickfix window and preview window
 " . going to the correct line _and column_ number from from the quick fix
 "   window.
-" ============================================================================== 
+" ==============================================================================
 " Tex_SetupErrorWindow: sets up the cwindow and preview of the .log file {{{
-" Description: 
+" Description:
 function! Tex_SetupErrorWindow()
 	let mainfname = Tex_GetMainFileName()
 
@@ -672,12 +672,12 @@ function! Tex_SetupErrorWindow()
 
 endfunction " }}}
 " Tex_PositionPreviewWindow: positions the preview window correctly. {{{
-" Description: 
+" Description:
 " 	The purpose of this function is to count the number of times an error
 " 	occurs on the same line. or in other words, if the current line is
 " 	something like |10 error|, then we want to count the number of
 " 	lines in the quickfix window before this line which also contain lines
-" 	like |10 error|. 
+" 	like |10 error|.
 "
 function! Tex_PositionPreviewWindow(filename)
 
@@ -760,12 +760,12 @@ function! Tex_PositionPreviewWindow(filename)
 
 endfunction " }}}
 " Tex_UpdatePreviewWindow: updates the view of the log file {{{
-" Description: 
+" Description:
 "       This function should be called when focus is in a quickfix window.
 "       It opens the log file in a preview window and makes it display that
 "       part of the log file which corresponds to the error which the user is
 "       currently on in the quickfix window. Control returns to the quickfix
-"       window when the function returns. 
+"       window when the function returns.
 "
 function! Tex_UpdatePreviewWindow(filename)
 	call Tex_PositionPreviewWindow(a:filename)
@@ -776,12 +776,12 @@ function! Tex_UpdatePreviewWindow(filename)
 	endif
 endfunction " }}}
 " Tex_GotoErrorLocation: goes to the correct location of error in the tex file {{{
-" Description: 
+" Description:
 "   This function should be called when focus is in a quickfix window. This
 "   function will first open the preview window of the log file (if it is not
 "   already open), position the display of the preview to coincide with the
 "   current error under the cursor and then take the user to the file in
-"   which this error has occured. 
+"   which this error has occured.
 "
 "   The position is both the correct line number and the column number.
 function! Tex_GotoErrorLocation(filename)
@@ -841,7 +841,7 @@ function! Tex_GotoErrorLocation(filename)
 	endif
 endfunction " }}}
 " Tex_SetCompilerMaps: sets maps for compiling/viewing/searching {{{
-" Description: 
+" Description:
 function! <SID>Tex_SetCompilerMaps()
 	if exists('b:Tex_doneCompilerMaps')
 		return
@@ -857,12 +857,12 @@ function! <SID>Tex_SetCompilerMaps()
 	call Tex_MakeMap(s:ml."ll", "<Plug>Tex_Compile", 'v', '<buffer>')
 	call Tex_MakeMap(s:ml."lv", "<Plug>Tex_View", 'n', '<buffer>')
 	call Tex_MakeMap(s:ml."ls", "<Plug>Tex_ForwardSearch", 'n', '<buffer>')
-endfunction 
+endfunction
 " }}}
 
 augroup LatexSuite
-	au LatexSuite User LatexSuiteFileType 
-		\ call Tex_Debug('compiler.vim: Catching LatexSuiteFileType event', 'comp') | 
+	au LatexSuite User LatexSuiteFileType
+		\ call Tex_Debug('compiler.vim: Catching LatexSuiteFileType event', 'comp') |
 		\ call <SID>Tex_SetCompilerMaps()
 augroup END
 

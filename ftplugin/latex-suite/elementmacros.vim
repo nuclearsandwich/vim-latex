@@ -2,7 +2,7 @@
 " 	     File: elementmacros.vim
 "      Author: Mikolaj Machowski
 "     Created: Tue Apr 23 06:00 PM 2002 PST
-" 
+"
 "  Description: macros for dimensions/fonts/counters.
 "               and various common commands such ref/label/footnote.
 "=============================================================================
@@ -30,7 +30,7 @@ let s:variousMenuLoc    = g:Tex_ElementsMenuLocation.'Various.'
 
 " ==============================================================================
 " Set up the functions the first time.
-" ============================================================================== 
+" ==============================================================================
 if !exists('s:definedFuncs') " {{{
 	let s:definedFuncs = 1
 
@@ -68,7 +68,7 @@ if !exists('s:definedFuncs') " {{{
 		exe 'amenu '.location.
 			\" <plug><C-r>=IMAP_PutTextWithMovement('\\".a:rhs."{<++>}<++>')<CR>"
 		exe 'vmenu '.location.
-			\" \<C-\\>\<C-n>:call VEnclose('\\".a:rhs."{', '}', '', '')<CR>" 
+			\" \<C-\\>\<C-n>:call VEnclose('\\".a:rhs."{', '}', '', '')<CR>"
 	endfunction " }}}
 	" Tex_FontSize: sets up size fonts {{{
 	function! <SID>Tex_FontSize(name)
@@ -106,7 +106,7 @@ endif
 
 " ==============================================================================
 " Fonts
-" ============================================================================== 
+" ==============================================================================
 " series/family/shape {{{
 call <SID>Tex_FontFamily("FBF","series")
 call <SID>Tex_FontFamily("FMD","series")
@@ -167,7 +167,7 @@ endif
 
 " ==============================================================================
 " Dimensions
-" ============================================================================== 
+" ==============================================================================
 if g:Tex_Menus
 	" {{{ Static1
 	call <SID>Tex_DimMenus('Static1', 'arraycolsep')
@@ -244,7 +244,7 @@ endif
 
 " ==============================================================================
 " Counters
-" ============================================================================== 
+" ==============================================================================
 if g:Tex_Menus
 	" Counters {{{
 	call <SID>Tex_CounterMenus('Counters', 'bottomnumber')
@@ -307,7 +307,7 @@ endif
 
 " ==============================================================================
 " Various
-" ============================================================================== 
+" ==============================================================================
 if g:Tex_Menus
 	" Various {{{
 	call <SID>Tex_VariousMenus('ref{}'         , '\ref{<++>}<++>')

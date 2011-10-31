@@ -3,7 +3,7 @@ if exists("overcite_package_file")
 endif
 let overcite_package_file = 1
 
-let g:TeX_package_option_overcite = 
+let g:TeX_package_option_overcite =
 \ 'verbose,'
 \.'ref,'
 \.'nospace,'
@@ -13,7 +13,7 @@ let g:TeX_package_option_overcite =
 \.'nomove,'
 \.'noadjust'
 
-let g:TeX_package_overcite = 
+let g:TeX_package_overcite =
 \ 'bra:cite,'
 \.'bra:citen,'
 \.'bra:citenum,'

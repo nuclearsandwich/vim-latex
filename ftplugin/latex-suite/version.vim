@@ -1,5 +1,5 @@
 " Tex_Version: returns a string which gives the current version number of latex-suite
-" Description: 
+" Description:
 " 	Each time a bug fix/addition is done in any source file in latex-suite,
 " 	not just this file, the number below has to be incremented by the author.
 " 	This will ensure that there is a single 'global' version number for all of
@@ -10,7 +10,7 @@
 "
 " 	Latex-suite will follow a 3-tier system of versioning just as Vim. A
 " 	version number will be of the form:
-"		
+"
 "		X.Y.ZZ
 "
 "	'X' 	will only be incremented for a major over-haul or feature addition.
@@ -25,6 +25,6 @@
 "			keep that as a stable point.
 function! Tex_Version()
 	return "Latex-Suite: version 1.8.23"
-endfunction 
+endfunction
 
 com! -nargs=0 TVersion echo Tex_Version()

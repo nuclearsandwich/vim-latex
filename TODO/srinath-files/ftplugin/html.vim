@@ -2,10 +2,10 @@
 "      Author: Srinath Avadhanula
 "     Created: Tue Mar 19 09:00 PM 2002 PST
 " Last Change: Fri Jun 06 10:00 PM 2003 PST
-" Description: 
-" 
-" Installation: 
-"      History: 
+" Description:
+"
+" Installation:
+"      History:
 "         TODO:
 "=============================================================================
 

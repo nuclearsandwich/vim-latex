@@ -47,8 +47,8 @@ formats:
 	format</a>. This file should be installed in
 	<tt>~/.vim/doc/latex-suite-quickstart.txt</tt> when you install latex-suite.
 	<p>
-	This file can be viewed by doing 
-	<tt>:help latex-suite-quickstart.txt</tt> 
+	This file can be viewed by doing
+	<tt>:help latex-suite-quickstart.txt</tt>
 	from within vim after downloading latex-suite and following the
 	installation instructions.
 	</p>
@@ -62,11 +62,11 @@ Latex-Suite comes ships with edition 1.6 of the LaTeX2e documentation
 translated into vim-help format. This file can be downloaded separately from
 Latex-Suite <a href="download/latexhelp.txt">here</a>. After downloading
 this file to <tt>~/.vim/doc</tt>, you will need to run the <tt>:helptags</tt>
-command from within vim to view LaTeX help from within Vim. 
+command from within vim to view LaTeX help from within Vim.
 <p>
 Click <a href="download/latexhelp.html">here</a> for a quick peek at how this
 might look from within vim. (The color-scheme is of course specific to your
-preferences).  
+preferences).
 </p>
 <p>Type <tt>:help helptags</tt> from within Vim for more information</p>.
 

@@ -3,7 +3,7 @@ if exists("amsmath_package_file")
 endif
 let amsmath_package_file = 1
 
-let g:TeX_package_option_amsmath = 
+let g:TeX_package_option_amsmath =
 \ 'centertags,'
 \.'tbtags,'
 \.'sumlimits,'
@@ -16,7 +16,7 @@ let g:TeX_package_option_amsmath =
 \.'reqno,'
 \.'fleqno'
 
-let g:TeX_package_amsmath = 
+let g:TeX_package_amsmath =
 \ 'sbr:Environments,'
 \.'env:equation,'
 \.'env:equation*,'

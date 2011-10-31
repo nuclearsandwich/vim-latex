@@ -3,7 +3,7 @@ if exists("drftcite_package_file")
 endif
 let drftcite_package_file = 1
 
-let g:TeX_package_option_drftcite = 
+let g:TeX_package_option_drftcite =
 \ 'verbose,'
 \.'nospace,'
 \.'space,'
@@ -13,7 +13,7 @@ let g:TeX_package_option_drftcite =
 \.'shownumbers,'
 \.'nocitecount'
 
-let g:TeX_package_drftcite = 
+let g:TeX_package_drftcite =
 \ 'bra:cite,'
 \.'bra:citen,'
 \.'sep:redefine,'
