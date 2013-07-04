@@ -5,7 +5,7 @@ let textfit_package_file = 1
 
 let g:TeX_package_option_textfit = ''
 
-let g:TeX_package_textfit = 
+let g:TeX_package_textfit =
 \ 'brd:scaletowidth,'
 \.'brd:scaletoheight'
 

@@ -3,9 +3,9 @@
 "     Created: Thu Mar 21 06:00 PM 2002 PST
 " Last Change: Sun Apr 20 04:00 PM 2003 PDT
 " Description: ftplugin for vim
-" 
+"
 " Installation:
-"      History: 
+"      History:
 "         TODO:
 "=============================================================================
 
@@ -26,7 +26,7 @@ call IMAP ('sec'.s:ml,      "\" \<esc>78a=\<esc>o\" \<cr> \<esc>78i=\<esc>", 'vi
 call IMAP ('func'.s:ml,     "\<C-r>=AskVimFunc()\<cr>", 'vim')
 " end vim mappings }}}
 " AskVimFunc: asks for function name and sets up template {{{
-" Description: 
+" Description:
 function! AskVimFunc()
 	let name = input('Name of the function : ')
 	if name == ''
@@ -38,11 +38,11 @@ function! AskVimFunc()
 	else
 		let sidstr = ''
 	endif
-	return IMAP_PutTextWithMovement( 
+	return IMAP_PutTextWithMovement(
 		\ "\" ".name.": <+short description+> {{{\<cr>" .
-		\ "\" Description: <+long description+>\<cr>" . 
-		\ "\<C-u>function! ".name."(<+arguments+>)<++>\<cr>" . 
-		\       "<+function body+>\<cr>" . 
+		\ "\" Description: <+long description+>\<cr>" .
+		\ "\<C-u>function! ".name."(<+arguments+>)<++>\<cr>" .
+		\       "<+function body+>\<cr>" .
 		\ "endfunction \" }}}"
 		\ )
 endfunction " }}}

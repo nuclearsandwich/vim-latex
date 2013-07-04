@@ -3,7 +3,7 @@ if exists("geometry_package_file")
 endif
 let geometry_package_file = 1
 
-let g:TeX_package_option_geometry = 
+let g:TeX_package_option_geometry =
 \ 'sbr:Boolean,'
 \.'verbose,'
 \.'landscape,'
@@ -87,7 +87,7 @@ let g:TeX_package_option_geometry =
 \.'vdivide={<++>},'
 \.'divide={<++>}'
 
-let g:TeX_package_geometry = 
+let g:TeX_package_geometry =
 \ 'bra:geometry'
 
 " vim:ft=vim:ff=unix:

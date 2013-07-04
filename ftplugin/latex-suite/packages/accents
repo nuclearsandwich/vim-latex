@@ -3,11 +3,11 @@ if exists("accents_package_file")
 endif
 let accents_package_file = 1
 
-let g:TeX_package_option_accents = 
+let g:TeX_package_option_accents =
 \ 'nonscript,'
 \.'single'
 
-let g:TeX_package_accents = 
+let g:TeX_package_accents =
 \ 'bra:grave,'
 \.'bra:acute,'
 \.'bra:check,'

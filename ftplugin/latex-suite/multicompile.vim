@@ -1,7 +1,7 @@
 " ============================================================================
 " 	     File: multicompile.vim
 "      Author: Srinath Avadhanula
-"     Created: Sat Jul 05 03:00 PM 2003 
+"     Created: Sat Jul 05 03:00 PM 2003
 " Description: compile a .tex file multiple times to get cross references
 "              right.
 "     License: Vim Charityware License

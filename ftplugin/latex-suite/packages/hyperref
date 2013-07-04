@@ -87,7 +87,7 @@ let g:TeX_package_option_hyperref =
 \.'verbose=,'
 \.'vtex'
 
-let g:TeX_package_hyperref = 
+let g:TeX_package_hyperref =
 \ 'sbr:Preamble,'
 \.'bra:hypersetup,'
 \.'wwwbrowser,'

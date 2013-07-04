@@ -48,20 +48,20 @@ features:
 	help format so that you can get help for common latex commands from
 	within vim.  You can view the HTML version of this file <a
 	href="download/latexhelp.html">here</a>.  <p></p>
-</li> 
-<li><a href="download/latex-suite.html#latex-dictionary">Dictionary</a> 
+</li>
+<li><a href="download/latex-suite.html#latex-dictionary">Dictionary</a>
 	Latex-suite ships with a dictionary with over
 	600 LaTeX commands, which speeds up typing using the <tt>CTRL-X_d</tt>
 	command of vim.<p></p>
 </li>
-<li><a href="documentation/latex-suite/latex-suite-templates.html">Customized Templates</a> 
+<li><a href="documentation/latex-suite/latex-suite-templates.html">Customized Templates</a>
 	Latex-suite ships with some commonly used latex templates. It is
 	trivial to add your own templates.  The templates can contain dynamic
 	data such as time of creation etc.  See <a
 	href="index.php?subject=templates">list of current templates</a>.
 	<p></p>
 </li>
-<li><a href="documentation/latex-suite/custom-macros-menu.html">Customized Macros</a> 
+<li><a href="documentation/latex-suite/custom-macros-menu.html">Customized Macros</a>
 	Latex-suite makes it easy to add custom macros, again with the
 	possibility of dynamic content and automatic cursor placement. <p></p>
 </li>

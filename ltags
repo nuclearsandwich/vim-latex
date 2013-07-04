@@ -33,7 +33,7 @@ for $srcfile (@allsrcfiles) {
        $bibfile = $1;
     }
 
-    # write \bibitem in tags file 
+    # write \bibitem in tags file
     @mrefs=();
     @refs=();
     @multirefs=();

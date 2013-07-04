@@ -5,7 +5,7 @@ let deleq_package_file = 1
 
 let g:TeX_package_option_deleq = ''
 
-let g:TeX_package_deleq = 
+let g:TeX_package_deleq =
 \.'env:deqn,'
 \.'env:ddeqn,'
 \.'env:deqarr,'

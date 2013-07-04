@@ -46,7 +46,7 @@ micro template:
     \label{fig:«label»}
 \end{figure}«»
 </pre>
-The text <tt>«eps file»</tt> will be selected and vim will be left in 
+The text <tt>«eps file»</tt> will be selected and vim will be left in
 <a
 href="http://vimdoc.sourceforge.net/cgi-bin/vim2html2.pl?page=version5.txt#new-Select-mode">select-mode</a>
 so that the user can continue typing straight away. After having typed in the
@@ -74,7 +74,7 @@ happened when you tried each of the steps below:
 <ol>
 <li>What does
 	<a name=compile_rule_dvi></a>
-	<pre>:echo Tex_CompileRule_dvi</pre> 
+	<pre>:echo Tex_CompileRule_dvi</pre>
 	say? This should be a string such as
 	<pre>latex -interaction=nonstopmode $*</pre>
 	Make sure that you can get this command to execute on your operating
@@ -177,7 +177,7 @@ Q: Completion does not work for me on a Microsoft Windows machine.
 You will need to install a good <tt>grep</tt> program to make completion
 work on MS Windows. Latex-suite on windows has been tested with cygwin
 which comes with a port of GNU grep. That works fine. If you do not want to
-install cygwin, then you can install just <tt>grep</tt> from 
+install cygwin, then you can install just <tt>grep</tt> from
 <a href="http://unxutils.sourceforge.net">here</a>.
 Make sure that your version of <tt>grep</tt> supports the <tt>-H</tt> flag
 which makes <tt>grep</tt> include the filename even when searching with a
@@ -243,7 +243,7 @@ Replace <tt>&lt;leader&gt;it</tt> with any other key-sequence. This will
 make <tt>&lt;leader&gt;it</tt> key insert an <tt>\item</tt> command
 corresponding to the last opened environment in the current line in insert
 mode. The <tt>&lt;M-i&gt;</tt> key which is used for inserting the
-<tt>e-acute</tt> character will remain unmapped. 
+<tt>e-acute</tt> character will remain unmapped.
 </div>
 </blockquote>
 
@@ -303,7 +303,7 @@ To change this, you need to add <tt>let g:tex_flavor='latex'</tt> to your .vimrc
 <!-- A sample Q & A
 <a name="faq-#">
 <div class=qa>
-Q: 
+Q:
 </div>
 <blockquote>
 <div class=ans>

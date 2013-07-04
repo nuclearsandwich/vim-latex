@@ -3,7 +3,7 @@
 <?
 echo "<b>Name:</b> $name<br>";
 
-if ($epost == '') { 
+if ($epost == '') {
 	echo "<font color=\"red\"><b>E-mail Address:</b></font> ";
 }
 else {
@@ -13,7 +13,7 @@ echo "$epost <br>";
 
 echo "<b>Subject:</b> $subject<br>";
 
-if ($message == '') { 
+if ($message == '') {
 	echo "<font color=\"red\"><b>Message:</b></font>";
 }
 else {
@@ -43,7 +43,7 @@ function wraptext($text,$warp) {
 	return $output;
 }
 
-if ($epost != '' && $message != '') 
+if ($epost != '' && $message != '')
 {
 	$myemail = "vim-latex-devel@lists.sourceforge.net";
 
@@ -61,13 +61,13 @@ if ($epost != '' && $message != '')
 	$headers .= "X-Http-Referer-Info: $hrefer \n";
 	$headers .= "X-Agent-Info: $agent \n";
 
-	$msg = wraptext($message,72); 
+	$msg = wraptext($message,72);
 
 	mail($myemail, $subject, $msg, $headers);
 
 	echo "<H3>Mail sent</H3>";
 }
-else 
+else
 {
 	echo "<H3><font color=\"red\">Not sent!</font></h3>";
 	echo "<H4>Sorry, but you have to fill out the field(s) marked with red colour</h4>";

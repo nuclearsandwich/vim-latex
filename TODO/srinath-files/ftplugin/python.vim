@@ -1,5 +1,5 @@
 " PY_GetFunction: generates a function prototype {{{
-" " Description: 
+" " Description:
 function! PY_MakeFunctionTemplate()
 	let line = getline('.')
 

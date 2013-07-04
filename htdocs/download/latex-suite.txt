@@ -46,7 +46,7 @@ file:  >
     " of indentation.
 <   set sw=2 >
     " TIP: if you write your \label's as \label{fig:something}, then if you
-    " type in \ref{fig: and press <C-n> you will automatically cycle through 
+    " type in \ref{fig: and press <C-n> you will automatically cycle through
     " all the figure labels.
 <   set iskeyword+=: >
 
@@ -57,9 +57,9 @@ degree. Please see the included file latex-suite/texrc file for the complete
 list of variables which can be customized.
 
 TABLE OF CONTENTS                                         *latex-suite-toc*
-                                                          
+
 |latex-macros|      Insert and visual mode mappings and menu items for
-                    commonly used LaTeX typesetting elements 
+                    commonly used LaTeX typesetting elements
 
 |latex-compiling|   This version of latex-suite ships with a version of the
                     compiler specification which produces slightly less
@@ -74,7 +74,7 @@ TABLE OF CONTENTS                                         *latex-suite-toc*
                     describes how to use these features and how to set up your
                     dvi viewer to best use this feature.
 
-|latex-folding|     manual folding based on LaTeX syntax elements. 
+|latex-folding|     manual folding based on LaTeX syntax elements.
 
 |latex-packages|    This module provides a way to generate custom menus based
                     on the packages used in the file being edited.
@@ -100,7 +100,7 @@ TABLE OF CONTENTS                                         *latex-suite-toc*
 LATEX MACROS                                   *latex-macros* {{{
 
 Latex-Suite ships with a very comprehensive set of insert mode and visual mode
-mappings and menu items to typeset most of the LaTeX elements. 
+mappings and menu items to typeset most of the LaTeX elements.
 
 We use a "macro" to refer to the collection of 3 objects, an insert mode
 mapping, a visual mode mapping and a menu item. For example, a figure macro
@@ -225,7 +225,7 @@ depending on character-wise or line-wise selection.
 
 }}}
 ---------------------------------------------------------------------------
-Section Mappings: {{{ 
+Section Mappings: {{{
 
 Inserts LaTeX sections: >
       \section
@@ -255,7 +255,7 @@ Example:
 
 }}}
 ---------------------------------------------------------------------------
-AUC-TEX key bindings: {{{ 
+AUC-TEX key bindings: {{{
 
 These are simple 2 key expansions for some very commonly used LaTeX elements.
    Examples: >
@@ -286,7 +286,7 @@ These are simple 2 key expansions for some very commonly used LaTeX elements.
 	`2   expands to   \sqrt{«»}«»
 	`|   expands to   \Big|
 	`I   expands to   \int_{«»}^{«»}«»"
-<   
+<
     (again, notice the convenient place-holders)
 
 In addition the visual mode macros are provided:
@@ -310,8 +310,8 @@ Diacritics speed up typing European languages.
     =<l>     expands to \'{<l>}
 <   where <l> is a letter ('a' to 'z' and 'A' to 'Z')
 >
-    +}       expands to \"{a} 
-    +:       expands to \^{o} 
+    +}       expands to \"{a}
+    +:       expands to \^{o}
 <
 Latex-Suite also ships with a function SmartBS(), which offers another
 convinience, i.e diacritic characters are treated as a single character for
@@ -353,12 +353,12 @@ style.
 
 }}}
 ===========================================================================
-LATEX COMPILING                             *latex-compiling* {{{ 
+LATEX COMPILING                             *latex-compiling* {{{
 
 This functionality is available via the TeX-Suite menu.
 
 Latex-suite ships with a set of tools to compile LaTeX files into various
-formats and view them. 
+formats and view them.
 
 If you are using commonly used LaTeX tools, then you should be all set as soon
 as you download and install latex-suite.  In order to compile a LaTeX file,
@@ -395,7 +395,7 @@ Once a ``rule'' has been set up for a format, you can set the target format by
 using the {TeX-Suite.Target Format} menu item. Alternatively, you can use the
 |:TTarget| command. You can also set the viewer and compiler to different
 formats, by using the menu items or using the commands |:TCTarget| and
-|:TVTarget|. 
+|:TVTarget|.
 
 NOTE: If you try choosing a format for which a rule is not defined, you
 will get a short warning message and no action will be taken.
@@ -436,8 +436,8 @@ the form:
 In other words, if the current file is ~/thesis/chapter.tex, where
 chapter.tex is being \input'ed into ~/thesis/main.tex, then create a file
 called >
-    main.tex.latexmain 
-< 
+    main.tex.latexmain
+<
 in the ~/thesis directory. This will then run "latex main.tex"
 NOTE: Here main.tex.latexmain is a different file from main.tex itself.
 main.tex need not be renamed. The contents of main.tex.latexmain are not used.
@@ -447,7 +447,7 @@ This ofcourse restricts each directory to have a single master file.
 Latex-suite ships with a modified (enhanced ?) version of the standard tex
 compiler plugin maintained by Artem Chuprina. The modifications allow this
 version to be customizable. i.e the user can set a verbosity level for the
-compiler. 
+compiler.
 
 By default it is set up in a "non-verbose", "ignore-common-warnings" mode,
 which means that irrelevant lines from the compilers output will be
@@ -457,17 +457,17 @@ Depending on the "ignore-level", (which can be set with the command TCLevel as
 described below) the following kinds of messages are ignored.  An ignore level
 of 3 for instance means that messages of type 1-3 will be ignored. By default,
 the ignore level is set to 4. (You can change this by setting
-g:Tex_IgnoreLevel in your .vimrc). 
+g:Tex_IgnoreLevel in your .vimrc).
 
 1. LaTeX Warning: Underfull box ...
 2. LaTeX Warning: Overfull box ...
    both these warnings (very common) are due to \hbox settings not being
    satisfied nicely.
-3. LaTeX Warning: Specifier 'h' changed to 't'. 
+3. LaTeX Warning: Specifier 'h' changed to 't'.
    This errors occurs when TeX is not able to correctly place a floating
    object at a specified location, because of which it defaulted to the
    top of the page.
-4. LaTeX Warning: You have requested ..., 
+4. LaTeX Warning: You have requested ...,
    This warning occurs in slitex when using the xypic package.
 5. Missing number error:
    Usually, when the name of an included eps file is spelled incorrectly,
@@ -522,7 +522,7 @@ current file (see |latex-master-file|)
                                                        *latex-searching*
 Yap for windows and some versions of xdvi for windows provide the ability to
 do "forward searching" on the .dvi file. This means that you can have the DVI
-viewer jump to a specified location. 
+viewer jump to a specified location.
 
 Pressing \ls while viewing a LaTeX file will perform this function, i.e the
 viewer will jump to the location under the cursor.
@@ -604,10 +604,10 @@ package file.
 If you do make a package file for latex-suite, please consider contacting the
 |latex-suite-maintainer|.
 
-Example: 
+Example:
 
 From the packages menu, choose the >
-    Tex-Packages.Supported.SIunits 
+    Tex-Packages.Supported.SIunits
 option. This will insert a line of form: >
     \usepackage[«»]«»{SIunits}«»
 at the beginning of the file (with the cursor placed at the first
@@ -615,7 +615,7 @@ at the beginning of the file (with the cursor placed at the first
 sub-menu called SIunits, which contains the commands and options for the
 SIunits package.You can use this sub-menu to insert commands from the package,
 add options to the package etc.
-    
+
 NOTE: Since the package file is a vim-script, you could define custom
 functions there, add mappings etc.
 
@@ -629,7 +629,7 @@ You can perform the following actions via the packages menu:
 {UpdateAll}        This function reads the preamble of the document for
                    \usepackage lines and if latexSuite supports the detected
                    packages, then sub-menus containing the package options and
-                   commands is created. 
+                   commands is created.
                    A |latex-package-dictionary| might also be created.
 
 {Supported}        This sub-menu contains a list of all the package files stored in
@@ -667,7 +667,7 @@ Here is short summary of prefixes which can be used in package files:
 
 {env:command}  Environment: creates simple environment template >
             \begin{command}
-                x 
+                x
             \end{command}<<>>
 {eno:command}  Environment with option: >
             \begin[x]{command}
@@ -712,7 +712,7 @@ current file.
 When latex-suite first starts up, it scans the latex-suite/templates/ directory
 and creates menu items based on the files found there. When you select a
 template from this menu, the file will be read in above the first line of the
-current file. 
+current file.
 
 A template file can use |placeholders| for easy cursor movement. In addition,
 you can use lines such as the following for inserting dates, names
@@ -756,13 +756,13 @@ user is prompted to choose one of them).
 There are some other tools provided in this menu, namely:
 
 {New}            Creates a new (unnamed) buffer in the latex-suite/macros/
-                 directory. 
+                 directory.
                  Use the command :TexMacroNew in non-gui mode.
 
 {Edit}           Opens up the corresponding macro file for editing.
                  Use :TexMacroEdit in non-gui mode.
 
-{Delete}         Deletes the corresponding macro. 
+{Delete}         Deletes the corresponding macro.
                  Use the prefixed numbers for fast navigation of menus.
                  Use :TexMacroDelete in non-gui mode.
 
@@ -800,7 +800,7 @@ LATEX DICTIONARY                           *latex-dictionary* {{{
 Latex-suite ships with a dictionary of over 600 commands from LaTeX and
 popular packages. When latex-suite starts up, it automatically adds this
 dictionary to vim's 'dictionary' option for use with vim's |i_CTRL-X_CTRL-K|
-command. 
+command.
 
 It is also possible to load custom dictionaries automatically when packages
 load. This will happen if a package definition file >
@@ -904,10 +904,10 @@ taking care about Macros, Templates and Packages.
 
                 Command accepts also latexSuite mappings (|latex-macros|)
                 without preceding S and in lowercase: >
-                        :TSection pa 
+                        :TSection pa
 <               will result in \part{}. It is possible to use full names of
                 sections: >
-                        :TSection part 
+                        :TSection part
 <
 :TSectionAdvanced                      *TSectionAdvanced*
                 Accepts the same arguments as |TSection| but leads to a couple

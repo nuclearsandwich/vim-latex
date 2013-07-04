@@ -3,14 +3,14 @@ if exists("tipa_package_file")
 endif
 let tipa_package_file = 1
 
-let g:TeX_package_option_tipa = 
+let g:TeX_package_option_tipa =
 \ 'T1,'
 \.'noenc,'
 \.'tone,'
 \.'extra,'
 \.'safe'
 
-let g:TeX_package_tipa = 
+let g:TeX_package_tipa =
 \ 'sbr:Common,'
 \.'bra:textipa,'
 \.'env:IPA,'

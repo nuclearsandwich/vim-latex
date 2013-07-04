@@ -3,13 +3,13 @@ if exists("ulem_package_file")
 endif
 let ulem_package_file = 1
 
-let g:TeX_package_option_ulem = 
+let g:TeX_package_option_ulem =
 \ 'normalem,'
 \.'ULforem,'
 \.'normalbf,'
 \.'UWforbf'
 
-let g:TeX_package_ulem = 
+let g:TeX_package_ulem =
 \ 'bra:uwave,'
 \.'bra:uline,'
 \.'bra:uuline,'

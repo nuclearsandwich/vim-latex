@@ -12,12 +12,12 @@ added to the project.
  </li>
  <li>We use TABS in the Latex-Suite project for indentation, _not_
  spaces. Please do not try to convince us otherwise. Its futile :)</li>
- <li>Each new function should be created in the following format: 
+ <li>Each new function should be created in the following format:
  <pre>" Tex_Function: short &lt; 40 character description {{{
 " Description: longer description which can span several lines.
 function! <SID>SetCompilerMaps()
 	" ... body of the function ...
-endfunction 
+endfunction
 " }}}</pre>
   Notice the marker characters <tt>{{{</tt> and <tt>}}}</tt> which fold the
   entire function into a single concise line while viewing.

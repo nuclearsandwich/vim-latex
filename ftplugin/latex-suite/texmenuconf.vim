@@ -2,8 +2,8 @@
 "        File: texmenuconf.vim
 "      Author: Srinath Avadhanula
 "   Copyright: Vim charityware license. :help license
-" Description: 
-" 
+" Description:
+"
 "=============================================================================
 
 " Paths, crucial for functions
@@ -35,7 +35,7 @@ endif
 let g:Tex_EnvMenuLocation = (g:Tex_NextMenuLocation).'.20 '.g:Tex_MenuPrefix.'E&nvironments.'
 let g:Tex_NextMenuLocation = g:Tex_NextMenuLocation + 1
 
-" Elements are always a top-level menu. 
+" Elements are always a top-level menu.
 " If we choose to nest elements, then the top-level &TeX-Elements menu
 " contains <Fonts / Counters / Dimensions>
 " otherwise, the Fonts, Counters and Dimensions menus become top-level menus.
@@ -82,7 +82,7 @@ endif
 
 " ==============================================================================
 " MenuConf: configure the menus as compact/extended, with/without math
-" ============================================================================== 
+" ==============================================================================
 function! Tex_MenuConfigure(type, action) " {{{
 	let menuloc = s:mainmenuname.'Configure\ Menu.'
 	if a:type == 'math'

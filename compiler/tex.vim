@@ -10,12 +10,12 @@
 "   By default it is set up in a 'non-verbose', 'ignore-common-warnings' mode,
 "   which means that irrelevant lines from the compilers output will be
 "   ignored and also some very common warnings are ignored.
-"   
+"
 "   Depending on the 'ignore-level', the following kinds of messages are
 "   ignored. An ignore level of 3 for instance means that messages 1-3 will be
-"   ignored. By default, the ignore level is set to 4. 
+"   ignored. By default, the ignore level is set to 4.
 "
-"   1. LaTeX Warning: Specifier 'h' changed to 't'. 
+"   1. LaTeX Warning: Specifier 'h' changed to 't'.
 "      This errors occurs when TeX is not able to correctly place a floating
 "      object at a specified location, because of which it defaulted to the
 "      top of the page.
@@ -23,7 +23,7 @@
 "   3. LaTeX Warning: Overfull box ...
 "      both these warnings (very common) are due to \hbox settings not being
 "      satisfied nicely.
-"   4. LaTeX Warning: You have requested ..., 
+"   4. LaTeX Warning: You have requested ...,
 "      This warning occurs in slitex when using the xypic package.
 "   5. Missing number error:
 "      Usually, when the name of an included eps file is spelled incorrectly,
@@ -32,7 +32,7 @@
 "      warnings.
 "      NOTE: number 5 is actually a latex error, not a warning!
 "
-"   Use 
+"   Use
 "       TCLevel <level>
 "   where level is a number to set the ignore level dynamically.
 "
@@ -41,7 +41,7 @@
 "    then the 'efm' switches to a 'verbose', 'no-lines-ignored' mode which is
 "    useful when you want to make final checks of your document and want to be
 "    careful not to let things slip by.
-" 
+"
 " TIP: MikTeX has a bug where it sometimes erroneously splits a line number
 "      into multiple lines. i.e, if the warning is on line 1234. the compiler
 "      output is:
@@ -108,7 +108,7 @@ endif
 " ==============================================================================
 " Customization of 'makeprg': {{{
 
-" There are several alternate ways in which 'makeprg' is set up. 
+" There are several alternate ways in which 'makeprg' is set up.
 "
 " Case 1
 " ------
@@ -137,7 +137,7 @@ endif
 " customization. In this case, this file makes some intelligent guesses based
 " on the platform. If he doesn't want to specify the complete 'makeprg' but
 " only the name of the compiler program (for example 'pdflatex' or 'latex'),
-" then he sets b:tex_flavor or g:tex_flavor. 
+" then he sets b:tex_flavor or g:tex_flavor.
 
 if exists('g:Tex_DefaultTargetFormat')
 	exec 'TTarget '.g:Tex_DefaultTargetFormat
@@ -174,7 +174,7 @@ endif
 " Functions for setting up a customized 'efm' {{{
 
 " IgnoreWarnings: parses g:Tex_IgnoredWarnings for message customization {{{
-" Description: 
+" Description:
 function! <SID>IgnoreWarnings()
 	let i = 1
 	while s:Strntok(g:Tex_IgnoredWarnings, "\n", i) != '' &&
@@ -184,11 +184,11 @@ function! <SID>IgnoreWarnings()
 		exe 'setlocal efm+=%-G%.%#'.warningPat.'%.%#'
 		let i = i + 1
 	endwhile
-endfunction 
+endfunction
 
 " }}}
 " SetLatexEfm: sets the 'efm' for the latex compiler {{{
-" Description: 
+" Description:
 function! <SID>SetLatexEfm()
 
 	let pm = ( g:Tex_ShowallLines == 1 ? '+' : '-' )
@@ -246,7 +246,7 @@ function! <SID>SetLatexEfm()
 		setlocal efm+=%-G%.%#
 	endif
 
-endfunction 
+endfunction
 
 " }}}
 " Strntok: extract the n^th token from a list {{{
@@ -262,7 +262,7 @@ function! <SID>SetTexCompilerLevel(...)
 		let level = a:1
 	else
 		call Tex_ResetIncrementNumber(0)
-		echo substitute(g:Tex_IgnoredWarnings, 
+		echo substitute(g:Tex_IgnoredWarnings,
 			\ '^\|\n\zs\S', '\=Tex_IncrementNumber(1)." ".submatch(0)', 'g')
 		let level = input("\nChoose an ignore level: ")
 		if level == ''
@@ -278,7 +278,7 @@ function! <SID>SetTexCompilerLevel(...)
 		echoerr "SetTexCompilerLevel: Unkwown option [".level."]"
 	end
 	call s:SetLatexEfm()
-endfunction 
+endfunction
 
 com! -nargs=? TCLevel :call <SID>SetTexCompilerLevel(<f-args>)
 " }}}

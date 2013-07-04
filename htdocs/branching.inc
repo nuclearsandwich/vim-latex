@@ -3,7 +3,7 @@ This is a pretty basic cheat sheet on how to create branches using CVS,
 which is what is used in the Latex-Suite project to maintain the code and
 collaborate between the developers. (I have developed a bad habit of saying
 "Developers! Developers! Developers!" whenever I want to say developers,
-wonder why?) 
+wonder why?)
 
 This document is compiled from the following sources:
 
@@ -87,7 +87,7 @@ can be relative to the local directory, in which case use
 	This is where you have checked out a copy of the main trunk.
 	</li>
 	<li><pre>$ cvs diff</pre>
-	If there are locally modified copies of any files, 
+	If there are locally modified copies of any files,
 	<pre>$ cvs commit</pre>
 	</li>
 	<li> This step depends on whether or not a merge has been done

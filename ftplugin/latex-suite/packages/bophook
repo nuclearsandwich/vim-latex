@@ -5,7 +5,7 @@ let bophook_package_file = 1
 
 let g:TeX_package_option_bophook = ''
 
-let g:TeX_package_bophook = 
+let g:TeX_package_bophook =
 \ 'bra:AtBeginPage,'
 \.'bra:PageLayout'
 

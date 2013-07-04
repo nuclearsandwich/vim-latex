@@ -11,7 +11,7 @@ if exists("fixme_package_file")
 endif
 let fixme_package_file = 1
 
-let g:TeX_package_option_fixme = 
+let g:TeX_package_option_fixme =
 \ 'draft,'
 \.'final,'
 \.'silent,'

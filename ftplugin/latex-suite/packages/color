@@ -3,7 +3,7 @@ if exists("color_package_file")
 endif
 let color_package_file = 1
 
-let g:TeX_package_option_color = 
+let g:TeX_package_option_color =
 \ 'monochrome,'
 \.'debugshow,'
 \.'dvips,'
@@ -26,7 +26,7 @@ let g:TeX_package_option_color =
 \.'nodvipsnames,'
 \.'usenames'
 
-let g:TeX_package_color = 
+let g:TeX_package_color =
 \ 'brs:definecolor{<++>}{<++>}{<++>},'
 \.'brs:DefineNamedColor{<++>}{<++>}{<++>}{<++>},'
 \.'bra:color,'

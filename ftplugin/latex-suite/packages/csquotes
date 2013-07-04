@@ -11,7 +11,7 @@ if exists("csquotes_package_file")
 endif
 let csquotes_package_file = 1
 
-let g:TeX_package_option_csquotes = 
+let g:TeX_package_option_csquotes =
 \ 'strict=,'
 \.'babel=,'
 \.'maxlevel=,'

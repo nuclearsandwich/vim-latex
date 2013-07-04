@@ -1,7 +1,7 @@
                    A (very) quick introduction to Latex-Suite
                           *latex-suite-quickstart.txt*
                  Srinath Avadhanula <srinath AT fastmail DOT fm>
-                                        
+
 
 
                                     Abstract
@@ -73,22 +73,22 @@ If the installation went well, you should see a new set of menus appear. Goto
 Tex-Suite > Templates. You will see a number of templates to choose from. For
 now, choose to insert a template for an article. You should get the following in
 the main vim window (after possibly a hit-enter prompt).  >
-    
+
           1 %        File: sample.tex
           2 %     Created: Sun Jun 22 04:00 PM 2003 P
           3 % Last Change: Sun Jun 22 04:00 PM 2003 P
           4 %
           5 \documentclass[a4paper]{article}
           6 \begin{document}
-          7 
+          7
           8 \end{document}
-          9 
+          9
          10 ~
          11 ~
          12 ~
          13 ~
     -- INSERT --                                     7,1           All
-    
+
 
 
 The cursor is left on line 7 (just after the \begin{document} line) from where
@@ -180,15 +180,15 @@ Folding in Latex-Suite                            *lq_6* *lq_a_bh* *lsq-folding*
 
 Okay, we have typed enough. At this stage, hopefully, your file is looking
 something like this:  >
-    
+
           1 %        File: sample.tex
           2 %     Created: Sun Jun 22 04:00 PM 2003 P
-          3 % Last Change: Mon Dec 15 07:00 PM 2003 
+          3 % Last Change: Mon Dec 15 07:00 PM 2003
           4 %
           5 \documentclass[a4paper]{article}
-          6 
+          6
           7 \usepackage[sumlimits,]{amsmath}
-          8 
+          8
           9 \begin{document}
          10 \begin{eqnarray}
          11 	\label{eqn:euler}
@@ -203,13 +203,13 @@ something like this:  >
          20 \end{eqnarray}
          21 This is my contribution to mathematics.
          22 \end{document}
-    
+
 In normal mode, press \rf. This will fold up the entire file and you should see
 the file looking as below:  >
-    
+
           1 %        File: sample.tex
           2 %     Created: Sun Jun 22 04:00 PM 2003 P
-          3 % Last Change: Mon Dec 15 07:00 PM 2003 
+          3 % Last Change: Mon Dec 15 07:00 PM 2003
           4 %
           5 +--  4 lines: Preamble:   \documentclass[a4paper]{article} -----
           9 \begin{document}
@@ -220,7 +220,7 @@ the file looking as below:  >
          10 +--  4 lines: eqnarray (eqn:simple) \label{eqn:simple} ---------
          21 This is my contribution to mathematics.
          22 \end{document}
-    
+
 What has happened is that Latex-Suite folded away blocks of LaTeX code into
 folded regions. You can open and close folds by using the command za in normal
 mode.
@@ -238,7 +238,7 @@ document, type in the following sentence  >
     This is a reference to (\ref{}).
 With the cursor between the {} press <F9> in insert mode. Your vim session will
 sprout two new windows and it should look like below:  >
-    
+
           9 \begin{document}
          10 +--  4 lines: eqnarray (eqn:euler) :  \label{eqn:euler}-----------------------
          14 This is the famous euler equation. I
@@ -269,7 +269,7 @@ sprout two new windows and it should look like below:  >
          15 will type another equation, just as
          16 true:
     test.tex [Preview][+]                                               11,2-5         46%
-    
+
 
 
 The cursor will relocate to the middle window which shows all \labels found in
@@ -375,8 +375,8 @@ NOTE: The reason Latex-Suite does not have this setting by default is that on
       find the DVI output satisfactory, then you can insert the first of the 2
       lines above into your $VIM/ftplugin/tex.vim file. $VIM is ~/vimfiles for
       windows and ~/.vim for *nix machines.
-      
-      
+
+
 
 --------------------------------------------------------------------------------
 Performing inverse searches                                   *lq_9_2* *lq_a_bn*

@@ -9,7 +9,7 @@ let g:TeX_package_option_url =
 \.'spaces,'
 \.'T1'
 
-let g:TeX_package_url = 
+let g:TeX_package_url =
 \ 'bra:urlstyle,'
 \.'bra:url,'
 \.'bra:path,'

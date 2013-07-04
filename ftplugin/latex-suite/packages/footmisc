@@ -3,7 +3,7 @@ if exists("footmisc_package_file")
 endif
 let footmisc_package_file = 1
 
-let g:TeX_package_option_footmisc = 
+let g:TeX_package_option_footmisc =
 \ 'bottom,'
 \.'flushmargin,'
 \.'marginal,'

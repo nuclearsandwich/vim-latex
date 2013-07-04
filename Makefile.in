@@ -87,7 +87,7 @@ updoc:
 # cd /home/groups/v/vi/vim-latex/htdocs/packages; cvs -q update
 uphtdocs:
 	$(SSHCMD) $(CVSUSER)@vim-latex.sf.net /home/groups/v/vi/vim-latex/bin/uphtdocs
-	
+
 # Automatically generate the Changelog file using the cvs2cl utility
 #
 # Arguments:

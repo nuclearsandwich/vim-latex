@@ -1,48 +1,48 @@
-/* 
+/*
  * Authors: Srinath Avadhanula and Mikolaj Machowski
  * This style file borrows some elements from main.css, the style file used
  * in cream.sf.net
  *
  * */
-P { 
+P {
 	font-size : 12pt ;
 	font-family : helvetica, arial, verdana, sans-serif ;
 	vertical-align : top;
 }
-DT { 
+DT {
 	font-size : 11pt ;
 	font-family : helvetica, arial, verdana, sans-serif ;
 	vertical-align : top;
 }
-LI { 
+LI {
 	font-size : 12pt ;
 	font-family : helvetica, arial, verdana, sans-serif ;
 	vertical-align : top;
 }
 
-DIV.header { 
+DIV.header {
 	margin : 0.5cm ;
 	width : 800px ;
-	height : 100 
+	height : 100
 }
 .note {
 }
 
-TD { 
+TD {
 	font-size : 11pt ;
 	font-family : helvetica, arial, verdana, sans-serif ;
 	vertical-align : top;
 }
-TD.menu { 
+TD.menu {
 	text-align : center ;
-	font-family : verdana, helvetica, sans-serif 
+	font-family : verdana, helvetica, sans-serif
 }
-TD.footright { 
+TD.footright {
 	text-align : right ;
 	font-size : 10pt ;
-	font-family : verdana, helvetica, sans-serif 
+	font-family : verdana, helvetica, sans-serif
 }
-TD.leftpanel { 
+TD.leftpanel {
 	font-size: 14px ;
 	font-family: verdana, helvetica, sans-serif ;
 	vertical-align: top ;
@@ -50,13 +50,13 @@ TD.leftpanel {
 	padding: 15px;
 	background-color: #88aaaa;
 }
-TD.mainpanel { 
+TD.mainpanel {
 	font-size : 12pt ;
 	font-family : helvetica, arial, verdana, sans-serif ;
 	vertical-align : top;
 	padding: 15px;
 }
-TD.footpanel { 
+TD.footpanel {
 	font-size: 12px ;
 	font-family: verdana, helvetica, sans-serif ;
 	vertical-align: top ;
@@ -70,7 +70,7 @@ TD.footpanel {
 	padding: 15px;
 	background-color: #445555;
 	color: #fffcfc;
-} 
+}
 .navheader {
 	margin-top: -0.5em;
 	margin-bottom: 0.5em;
@@ -83,24 +83,24 @@ TD.footpanel {
 SPAN.menu {
 	text-align : center ;
 	font-size : 12pt ;
-	font-family : verdana, helvetica, sans-serif 
+	font-family : verdana, helvetica, sans-serif
 }
 
 DIV.merit {
 	margin : 0.5cm ;
-	width : 800px 
+	width : 800px
 }
 
 TABLE.meritum {
 	margin : 0.5cm ;
-	border : 0 
+	border : 0
 }
 .foot {
 	margin : 0.5cm ;
-	width : 800px 
+	width : 800px
 }
-.head { 
-	margin : 0.5cm ; 
+.head {
+	margin : 0.5cm ;
 }
 
 CODE {
@@ -120,7 +120,7 @@ CODE {
 
 DIV.footer {
 	margin : 0.5cm ;
-	width : 800px 
+	width : 800px
 }
 .qa {
 	margin : 0.5cm ;
@@ -134,22 +134,22 @@ DIV.footer {
 
 H2.hline {
 	text-align : center ;
-	font-family : verdana, helvetica, sans-serif 
+	font-family : verdana, helvetica, sans-serif
 }
 
 A.extlinks {
 	font-size : 11pt ;
 	font-family : verdana, helvetica, sans-serif ;
-	font-weight : bold 
+	font-weight : bold
 }
 
 TT {
-	font-family: courier,sans-serif; 
-	font-size: 11pt; 
+	font-family: courier,sans-serif;
+	font-size: 11pt;
 }
 PRE.programlisting {
-	font-family: courier,sans-serif; 
-	font-size: 10pt; 
+	font-family: courier,sans-serif;
+	font-size: 10pt;
 	background-color:#eef0f3;
     border-color: #000000;
     border-width: 1px;
@@ -157,7 +157,7 @@ PRE.programlisting {
 }
 SPAN.conflict {
 	font-size : small ;
-	font-family: courier,sans-serif; 
+	font-family: courier,sans-serif;
 	color : #DD4444;
 }
 HR.navig {

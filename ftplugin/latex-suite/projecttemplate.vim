@@ -2,7 +2,7 @@
 " let g:projName = ''
 "
 " Project files
-" let g:projFiles = '' 
+" let g:projFiles = ''
 
 
 " Vim settings/maps/abbrs specific for this project

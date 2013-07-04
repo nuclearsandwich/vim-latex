@@ -2,7 +2,7 @@
 " 	     File: mathmacros.vim
 "      Author: Mikolaj Machowski
 "     Created: Tue Apr 23 06:00 PM 2002 PST
-" 
+"
 "  Description: macros for everything mathematical in latex.
 "=============================================================================
 
@@ -155,7 +155,7 @@ exe s:pA2.'psi<Tab>`y\ \ ψ         <plug>\psi '
 exe s:pA2.'omega<Tab>`w\ \ ω       <plug>\omega '
 " }}}
 " Greek Letters big {{{
-let s:pA3 = s:pA.'&Greek.&Big.' 
+let s:pA3 = s:pA.'&Greek.&Big.'
 exe s:pA3.'Alpha<Tab>`A\ \ A        <plug>\Alpha '
 exe s:pA3.'Beta<Tab>`B\ \ B         <plug>\Beta '
 exe s:pA3.'Gamma<Tab>`G\ \ Γ        <plug>\Gamma '
@@ -181,7 +181,7 @@ exe s:pA3.'Psi<Tab>`Y\ \ Ψ          <plug>\Psi '
 exe s:pA3.'Omega<Tab>`W\ \ Ω        <plug>\Omega '
 " }}}
 " BinaryRel1 {{{
-let s:pA4 = s:pA."&BinaryRel1."  
+let s:pA4 = s:pA."&BinaryRel1."
 exe s:pA4.'ll<Tab>≪                    <plug>\ll '
 exe s:pA4.'lll<Tab>⋘                   <plug>\lll '
 exe s:pA4.'leqslant<Tab>≤              <plug>\leqslant '
@@ -215,8 +215,8 @@ exe s:pA4.'models<Tab>⊨                <plug>\models '
 exe s:pA4.'therefore<Tab>∴             <plug>\therefore '
 exe s:pA4.'backepsilon<Tab>∍           <plug>\backepsilon '
 " }}}
-" nBinaryRel1 {{{ 
-let s:pA4a = s:pA."&nBinaryRel1."  
+" nBinaryRel1 {{{
+let s:pA4a = s:pA."&nBinaryRel1."
 exe s:pA4a.'nless<Tab>≮                  <plug>\nless '
 exe s:pA4a.'nleqslant<Tab>≰              <plug>\nleqslant '
 exe s:pA4a.'nleq<Tab>                   <plug>\nleq '
@@ -243,8 +243,8 @@ exe s:pA4a.'nshortparallel<Tab>         <plug>\nshortparallel '
 exe s:pA4a.'nvdash<Tab>⊬                 <plug>\nvdash '
 exe s:pA4a.'nvDash<Tab>⊭                 <plug>\nvDash '
 " }}}
-" BinaryRel2 {{{ 
-let s:pA5 = s:pA."&BinaryRel2."  
+" BinaryRel2 {{{
+let s:pA5 = s:pA."&BinaryRel2."
 exe s:pA5.'gg<Tab>≫                      <plug>\gg '
 exe s:pA5.'ggg<Tab>⋙                     <plug>\ggg '
 exe s:pA5.'gggtr<Tab>⋙                    <plug>\gggtr '
@@ -305,7 +305,7 @@ exe s:pA5a.'nshortmid<Tab>              <plug>\nshortmid '
 exe s:pA5a.'nVdash<Tab>⊮                 <plug>\nVdash '
 " }}}
 " {{{ BinaryRel3
-let s:pA6 = s:pA."&BinaryRel3."  
+let s:pA6 = s:pA."&BinaryRel3."
 exe s:pA6.'doteq<Tab>≐                   <plug>\doteq '
 exe s:pA6.'circeq<Tab>≗                  <plug>\circeq '
 exe s:pA6.'eqcirc<Tab>≖                  <plug>\eqcirc '
@@ -350,7 +350,7 @@ exe s:pA6a.'ntriangleright<Tab>⋫         <plug>\ntriangleright '
 exe s:pA6a.'ntrianglerighteq<Tab>⋭       <plug>\ntrianglerighteq '
 " }}}
 " {{{ BinaryRel4
-let s:pA7 = s:pA."&BinaryRel4."  
+let s:pA7 = s:pA."&BinaryRel4."
 exe s:pA7.'lessgtr<Tab>≶                 <plug>\lessgtr '
 exe s:pA7.'gtrless<Tab>≷                 <plug>\gtrless '
 exe s:pA7.'lesseqgtr<Tab>⋚               <plug>\lesseqgtr '

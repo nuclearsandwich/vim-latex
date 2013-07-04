@@ -9,7 +9,7 @@ let b:verbatim = 'programlisting'
 call IMAP("<>", '&lt;<++>&gt;<++>', 'docbk')
 " Define various b:tag_{word} variables for special <C-_> expansion {{{
 " the option thing is specific to latex-suite documentation.
-let b:tag_option = 
+let b:tag_option =
 	\ "<informaltable frame=\"all\">"."\<CR>".
     \ "<tgroup cols=\"2\">"."\<CR>".
     \ "<tbody>"."\<CR>".
@@ -22,7 +22,7 @@ let b:tag_option =
 	\ "<++>\<CR>".
 	\ "</para><++>"
 let b:tag_opt = b:tag_option
-let b:tag_table = 
+let b:tag_table =
 	\ "<informaltable frame=\"all\">"."\<CR>".
     \ "<tgroup cols=\"<++>\">"."\<CR>".
     \ "<thead>"."\<CR>".
@@ -33,11 +33,11 @@ let b:tag_table =
     \ "</tbody>"."\<CR>".
     \ "</tgroup>"."\<CR>".
     \ "</informaltable>\<CR><++>"
-let b:tag_tbody = 
+let b:tag_tbody =
     \ "<tbody>"."\<CR>".
     \ "<row>\<CR><entry><++></entry><++>\<CR></row><++>\<CR>".
     \ "</tbody>"."\<CR>"
-let b:tag_thead = 
+let b:tag_thead =
     \ "<thead>"."\<CR>".
     \ "<row>\<CR><entry><++></entry><++>\<CR></row><++>\<CR>".
     \ "</thead>"."\<CR>"
@@ -49,12 +49,12 @@ let b:tag_lnk = '<link linkend="<++>"><++></link><++>'
 let b:tag_anchor = '<anchor id="<++>" /><++>'
 let b:tag_anc = '<anchor id="<++>" /><++>'
 let b:tag_ent = '<entry><++></entry><++>'
-let b:tag_note = "<note>\<CR><para>\<CR><++>\<CR></para><++>\<CR></note><++>" 
+let b:tag_note = "<note>\<CR><para>\<CR><++>\<CR></para><++>\<CR></note><++>"
 let b:tag_row = "<row>\<CR><entry><++></entry><++>\<CR></row><++>"
 let b:tag_prg = "<programlisting><++></programlisting><++>"
 let b:tag_para = "<para>\<CR><++>\<CR></para><++>"
 let b:tag_section = "<section id=\"<++>\">\<CR>\<title><++></title>\<CR><para>\<CR><++>\<CR></para><++>\<CR></section><++>"
-let b:tag_sect = b:tag_section 
+let b:tag_sect = b:tag_section
 let b:tag_ol = "<orderedlist>\<CR><listitem><++></listitem><++>\<CR></orderedlist>"
 let b:tag_ul = "<simplelist>\<CR><member><++></member><++>\<CR></simplelist>"
 let b:tag_li = "<listitem><++></listitem><++>"
@@ -73,11 +73,11 @@ vmap <buffer> <silent> <leader>col 		<C-_><C-u>col<CR>
 
 imap <C-c> <C-\><C-N>:call DB_SearchID()<CR>
 " DB_SearchID: search for id='' and insert the id {{{
-" Description: 
+" Description:
 function! DB_SearchID()
 	let s:position = line('.').' | normal! '.virtcol('.')
 	let s:winnum = winnr()
-	
+
 	silent! grep! id= %
 	cwindow
 	if &ft != 'qf'
@@ -86,7 +86,7 @@ function! DB_SearchID()
 	nnoremap <buffer> <CR> :call DB_InsertID()<CR>
 endfunction " }}}
 " DB_InsertID: inserts id tag {{{
-" " Description: 
+" " Description:
 function! DB_InsertID()
 	if !exists('s:winnum') || !exists('s:position') || &ft != 'qf'
 		echomsg 'error calling DB_InsertID, quitting...'
@@ -94,7 +94,7 @@ function! DB_InsertID()
 	endif
 	let id = matchstr(getline('.'), 'id="\zs.\{-}\ze"')
 	cclose
-	
+
 	exec s:winnum.' wincmd w'
 	exec s:position
 	exec "normal! a".id."\<C-\>\<C-n>"
